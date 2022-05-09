@@ -1,0 +1,69 @@
+[PROJECT]
+Target=Tarea3.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.076
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Tarea3.c
+[Directories]
+Include=
+[C:\Users\alfon\Desktop\Tareas\SDE\Practicas C\Tarea3\Tarea3]
+Type=4
+[mru-list]
+1=Tarea3.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=18-06-2021
+D1_L=28
+D1_L1=[37125]Project Opened.
+D1_L2=[37194]Started Editing.
+D1_L3=[37518]Stopped Editing.
+D1_L4=[38606]Started Editing.
+D1_L5=[39533]Stopped Editing.
+D1_L6=[39610]Started Editing.
+D1_L7=[43432]Stopped Editing.
+TotalEdit=122
+TotalDebug=0
+D1_E=122
+D1_D=0
+D1_L8=[43432]Project Closed.
+D1_L9=[43864]Project Opened.
+D1_L10=[43889]Started Editing.
+D1_L11=[45321]Stopped Editing.
+D1_L12=[45341]Started Editing.
+D1_L13=[45991]Stopped Editing.
+D1_L14=[46957]Started Editing.
+D1_L15=[47563]Stopped Editing.
+D1_L16=[47681]Started Editing.
+D1_L17=[48017]Stopped Editing.
+D1_L18=[49858]Started Editing.
+D1_L19=[50781]Stopped Editing.
+D1_L20=[50781]Project Closed.
+D1_L21=[50891]Project Opened.
+D1_L22=[50905]Project Closed.
+D1_L23=[50905]Project Opened.
+D1_L24=[50915]Project Closed.
+D1_L25=[52019]Project Opened.
+D1_L26=[52298]Started Editing.
+D1_L27=[52600]Stopped Editing.
+D1_L28=[55677]Project Closed.
+
+[Opened Files]
+1=Tarea3.c
+t1=1
+Count=2
+2=Tarea3.h
+t2=1
+[Tarea3.c]
+Type=4
+
+[defines]
+buildcount=36
+[Units]
+Count=1
+1=Tarea3 (main)

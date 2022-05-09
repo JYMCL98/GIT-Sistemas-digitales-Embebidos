@@ -1,0 +1,61 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004     @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+025-02E main.numeros
+02F     main.i
+030     @delay_ms1.P1
+030     main.@SCRATCH1
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+000021  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica14\
+
+Project Files:
+    Practica14.c                                            [08-jun.-21 08:17  CRC=5BC2252D]
+    Practica14.h                                            [22-jul.-21 21:03  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F873.h [30-oct.-19 15:48  CRC=66252361]
+
+Source signature=280C6BEF
+Program memory checksum=0000
+Hex file CRC=B133
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica14\Practica14 (main)
+
+Compiler Settings:
+    Processor:      PIC16F873
+    Pointer Size:   8
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica14.xsym
+    Errors:      Practica14.err
+    Ext Symbols: Practica14.esym
+    INHX8:       Practica14.hex
+    Symbols:     Practica14.sym
+    List:        Practica14.lst
+    Debug/COFF:  Practica14.cof
+    Project:     Practica14.ccspjt
+    Call Tree:   Practica14.tre
+    Statistics:  Practica14.STA

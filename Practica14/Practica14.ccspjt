@@ -1,0 +1,55 @@
+[PROJECT]
+Target=Practica14.hex
+Processor_Text=PIC16F873
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica14.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica14\Practica14]
+Type=4
+[mru-list]
+1=Practica14.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=08-06-2021
+D1_L=6
+D1_L1=[28890]Project Opened.
+D1_L2=[28906]Started Editing.
+D1_L3=[29645]Stopped Editing.
+D1_L4=[29770]Started Editing.
+D1_L5=[30141]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=9
+D1_D=0
+D1_L6=[30588]Project Closed.
+D2=22-07-2021
+D2_L=4
+D2_L1=[73966]Project Opened.
+D2_L2=[75722]Started Editing.
+D2_L3=[76080]Stopped Editing.
+D2_E=1
+D2_D=0
+D2_L4=[76589]Project Closed.
+
+[Opened Files]
+1=Practica14.c
+t1=1
+Count=2
+2=Practica14.h
+t2=1
+[Practica14.c]
+Type=4
+
+[defines]
+buildcount=6
+[Units]
+Count=1
+1=Practica14 (main)

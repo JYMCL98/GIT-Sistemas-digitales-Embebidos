@@ -1,0 +1,77 @@
+[PROJECT]
+Target=practica22.hex
+Processor_Text=PIC16F873A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=practica22.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica22\practica22]
+Type=4
+[mru-list]
+1=practica22.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=4
+D1=17-06-2021
+D1_L=10
+D1_L1=[52519]Project Opened.
+D1_L2=[52567]Started Editing.
+D1_L3=[52901]Stopped Editing.
+D1_L4=[53368]Started Editing.
+D1_L5=[53904]Stopped Editing.
+TotalEdit=39
+TotalDebug=0
+D1_E=13
+D1_D=0
+D1_L6=[53904]Project Closed.
+D1_L7=[53905]Project Opened.
+D1_L8=[53915]Started Editing.
+D1_L9=[54341]Stopped Editing.
+D1_L10=[64283]Project Closed.
+D2=18-06-2021
+D2_L=8
+D2_L1=[27231]Project Opened.
+D2_L2=[27533]Started Editing.
+D2_L3=[27932]Stopped Editing.
+D2_L4=[28369]Started Editing.
+D2_L5=[28669]Stopped Editing.
+D2_L6=[29384]Started Editing.
+D2_L7=[30773]Stopped Editing.
+D2_E=20
+D2_D=0
+D2_L8=[37045]Project Closed.
+D3=21-06-2021
+D3_L=2
+D3_L1=[52789]Project Opened.
+D3_L2=[52867]Project Closed.
+D4=25-07-2021
+D4_L=6
+D4_L1=[9261]Project Opened.
+D4_L2=[9265]Started Editing.
+D4_L3=[9904]Stopped Editing.
+D4_L4=[11486]Started Editing.
+D4_L5=[11786]Stopped Editing.
+D4_E=6
+D4_D=0
+D4_L6=[13227]Project Closed.
+
+[Opened Files]
+1=practica22.c
+t1=14
+Count=2
+2=practica22.h
+t2=1
+[practica22.c]
+Type=4
+
+[defines]
+buildcount=17
+[Units]
+Count=1
+1=practica22 (main)

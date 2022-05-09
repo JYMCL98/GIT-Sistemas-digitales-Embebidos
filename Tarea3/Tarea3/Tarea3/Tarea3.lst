@@ -1,0 +1,278 @@
+CCS PCM C Compiler, Version 5.091, 13314               18-jun.-21 14:06
+
+               Filename:   C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Tarea3\Tarea3\Tarea3\Tarea3.lst
+
+               ROM used:   165 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   11 (3%) at main() level
+                           14 (4%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   05C
+0003:  NOP
+.................... // Universidad Autónoma Chapingo
+.................... //              DIMA
+.................... // Ingeniería Mecatrónica Agrícola
+.................... //            Equipo 1
+.................... //     Integrantes del equipo:
+.................... // Alfoso López Hernández
+.................... // Antonio Reyes Paredes
+.................... // Carlos Euardo Ruíz Diaz
+.................... // Jym Emmanuel Cocotle Lara
+.................... 
+.................... #include <Tarea3.h>
+.................... #include <16F877A.h>
+.................... //////////// Standard Header file for the PIC16F877A device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877A
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  08
+0009:  RETLW  0C
+000A:  RETLW  04
+000B:  RETLW  06
+000C:  RETLW  02
+000D:  RETLW  03
+000E:  RETLW  01
+000F:  RETLW  09
+0010:  BCF    0A.0
+0011:  BCF    0A.1
+0012:  BCF    0A.2
+0013:  ADDWF  02,F
+0014:  RETLW  09
+0015:  RETLW  01
+0016:  RETLW  03
+0017:  RETLW  02
+0018:  RETLW  06
+0019:  RETLW  04
+001A:  RETLW  0C
+001B:  RETLW  08
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... #use delay(crystal=4MHz)
+001C:  MOVLW  28
+001D:  MOVWF  04
+001E:  BCF    03.7
+001F:  MOVF   00,W
+0020:  BTFSC  03.2
+0021:  GOTO   030
+0022:  MOVLW  01
+0023:  MOVWF  78
+0024:  CLRF   77
+0025:  DECFSZ 77,F
+0026:  GOTO   025
+0027:  DECFSZ 78,F
+0028:  GOTO   024
+0029:  MOVLW  4A
+002A:  MOVWF  77
+002B:  DECFSZ 77,F
+002C:  GOTO   02B
+002D:  GOTO   02E
+002E:  DECFSZ 00,F
+002F:  GOTO   022
+0030:  RETURN
+.................... 
+.................... 
+.................... // Habilitamos el puerto b
+.................... #use standard_io(b)
+.................... // Habilitamos el puerto c
+.................... #use standard_io(c)
+.................... 
+.................... // Establecemos una variable de tipo entero y lo igualamos a 0
+.................... int contador = 0;
+.................... // Establecemos una variable de tipo entero de 16 bits
+.................... int16 lectura_ADC;
+.................... // Establecemos una variable de tipo entero de 16 bits
+.................... int16 millis;
+.................... 
+.................... // ClockWise 
+.................... // Establecemos el arreglo para el giro en sentido horario
+.................... byte const CW[8] = {0b1000, 0b1100, 0b0100, 0b0110,
+....................                     0b0010, 0b0011, 0b0001, 0b1001};
+.................... // Counter ClockWise
+.................... // Establecemos el arreglo para el giro en sentido antihorario
+.................... byte const CCW[8] ={0b1001, 0b0001, 0b0011, 0b0010,
+....................                     0b0110, 0b0100, 0b1100, 0b1000};
+.................... 
+.................... // Función que establece el sentido y velocidad del motor
+.................... void motor(int contador){
+....................       // Si el botón esta presionado, el motor gira en sentido horario
+....................       if(input_state(PIN_C0)){//CW
+0031:  BTFSS  07.0
+0032:  GOTO   03C
+....................          // Paso a la derecha
+....................          output_b(CW[contador]);
+0033:  MOVF   26,W
+0034:  CALL   004
+0035:  MOVWF  27
+0036:  BSF    03.5
+0037:  CLRF   06
+0038:  BCF    03.5
+0039:  MOVF   27,W
+003A:  MOVWF  06
+....................       }
+003B:  GOTO   044
+....................       // De lo contrario gira en sentido antihorario
+....................       else{//CCW
+....................          // Paso a la izquierda
+....................          output_b(CCW[contador]);
+003C:  MOVF   26,W
+003D:  CALL   010
+003E:  MOVWF  27
+003F:  BSF    03.5
+0040:  CLRF   06
+0041:  BCF    03.5
+0042:  MOVF   27,W
+0043:  MOVWF  06
+....................       }
+....................       // Control de velocidad
+....................       // Al valor del regulador se le resta 1 hasta llegar a 0
+....................       // con un retardo de 1 milisegundo
+....................       while(millis > 0){
+0044:  MOVF   24,F
+0045:  BTFSS  03.2
+0046:  GOTO   04A
+0047:  MOVF   25,F
+0048:  BTFSC  03.2
+0049:  GOTO   052
+....................          delay_ms(1);
+004A:  MOVLW  01
+004B:  MOVWF  28
+004C:  CALL   01C
+....................          millis--;
+004D:  MOVF   24,W
+004E:  BTFSC  03.2
+004F:  DECF   25,F
+0050:  DECF   24,F
+0051:  GOTO   044
+....................       }
+....................       // Varia dependiendo el equipo por la sobrecarga de la simulación
+....................       delay_ms(400); 
+0052:  MOVLW  02
+0053:  MOVWF  27
+0054:  MOVLW  C8
+0055:  MOVWF  28
+0056:  CALL   01C
+0057:  DECFSZ 27,F
+0058:  GOTO   054
+0059:  BCF    0A.3
+005A:  BCF    0A.4
+005B:  GOTO   0A1 (RETURN)
+.................... }
+.................... 
+.................... void main(){
+005C:  MOVF   03,W
+005D:  ANDLW  1F
+005E:  MOVWF  03
+005F:  MOVLW  FF
+0060:  MOVWF  20
+0061:  CLRF   21
+0062:  BSF    03.5
+0063:  BSF    1F.0
+0064:  BSF    1F.1
+0065:  BSF    1F.2
+0066:  BCF    1F.3
+0067:  MOVLW  07
+0068:  MOVWF  1C
+0069:  BCF    03.7
+....................    // Establecemos la entrada 0 como analógica
+....................    setup_adc_ports(AN0);
+006A:  BCF    1F.0
+006B:  BSF    1F.1
+006C:  BSF    1F.2
+006D:  BSF    1F.3
+....................    // ADC trabaja con el reloj interno
+....................    setup_adc(ADC_CLOCK_INTERNAL);
+006E:  BCF    1F.6
+006F:  BCF    03.5
+0070:  BSF    1F.6
+0071:  BSF    1F.7
+0072:  BSF    03.5
+0073:  BSF    1F.7
+0074:  BCF    03.5
+0075:  BSF    1F.0
+....................    // Establecemos el puerto b como salidas
+....................    set_tris_b(0x00);
+0076:  MOVLW  00
+0077:  BSF    03.5
+0078:  MOVWF  06
+....................    // Establecemos el puerto c0 como entrada
+....................    set_tris_c(0x01);
+0079:  MOVLW  01
+007A:  MOVWF  07
+007B:  BCF    03.5
+007C:  MOVWF  20
+....................    while(TRUE)
+....................    {
+....................       // Control de posisión del motor
+....................       // Declaramos  un bucle el cual sirve para leer los arreglos
+....................       // que declaramos anteriormente
+....................       for(contador = 0; contador <= 7; contador++){
+007D:  CLRF   21
+007E:  MOVF   21,W
+007F:  SUBLW  07
+0080:  BTFSS  03.0
+0081:  GOTO   0A3
+....................          set_adc_channel(0);  // Declaración del pin A0 como ADC
+0082:  MOVLW  00
+0083:  MOVWF  78
+0084:  MOVF   1F,W
+0085:  ANDLW  C7
+0086:  IORWF  78,W
+0087:  MOVWF  1F
+....................          delay_us(20);        // Retardo de estabilización
+0088:  MOVLW  06
+0089:  MOVWF  77
+008A:  DECFSZ 77,F
+008B:  GOTO   08A
+008C:  NOP
+....................          lectura_ADC = read_ADC();  // Lectura del ADC
+008D:  BSF    1F.2
+008E:  BTFSC  1F.2
+008F:  GOTO   08E
+0090:  MOVF   1E,W
+0091:  MOVWF  79
+0092:  BSF    03.5
+0093:  MOVF   1E,W
+0094:  MOVWF  78
+0095:  MOVF   79,W
+0096:  BCF    03.5
+0097:  MOVWF  23
+0098:  MOVF   78,W
+0099:  MOVWF  22
+....................          // Establecemos la velocidad
+....................          millis = lectura_ADC;  // Relación del ADC con la velocidad
+009A:  MOVF   23,W
+009B:  MOVWF  25
+009C:  MOVF   22,W
+009D:  MOVWF  24
+....................          motor(contador);       // Llamado de la función
+009E:  MOVF   21,W
+009F:  MOVWF  26
+00A0:  GOTO   031
+00A1:  INCF   21,F
+00A2:  GOTO   07E
+....................       }
+00A3:  GOTO   07D
+....................    }
+.................... }
+.................... 
+00A4:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

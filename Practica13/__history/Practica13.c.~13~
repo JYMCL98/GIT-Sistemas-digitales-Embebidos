@@ -1,0 +1,17 @@
+#include <practica13.h>
+#use standard_io(b)
+#define DELAY 200
+
+void main()
+{
+
+     set_tris_b(0b00000000);
+     output_b(0b00000000);
+   while(TRUE)
+   {
+      output_high(49);
+      delay_ms(DELAY);
+      
+   }
+
+}

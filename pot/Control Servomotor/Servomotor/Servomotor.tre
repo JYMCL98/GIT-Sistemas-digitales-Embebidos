@@ -1,0 +1,16 @@
+ÀÄServomotor
+   ÃÄMAIN  0/44  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄservo_init  0/14  Ram=0
+   ³  ÃÄservo_1_write  0/143  Ram=1
+   ³  ³  ÀÄmap_int  (Inline)  Ram=14
+   ³  ³     ÃÄ@MUL1616  (Inline)  Ram=5
+   ³  ³     ÀÄ@DIV1616  (Inline)  Ram=5
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄservo_1_write  0/143  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/20  Ram=1
+   ³  ÃÄservo_1_write  0/143  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÀÄ@delay_ms1  0/20  Ram=1
+   ÀÄtimer_0  0/20  Ram=0

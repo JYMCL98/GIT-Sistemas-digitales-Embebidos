@@ -1,0 +1,53 @@
+
+ROM used:   200/1024 (20%)
+            200/1024 (20%) including unused fragments
+
+            0.1 Average locations per line
+            0.4 Average locations per statement
+
+RAM used:   17/68 (25%) at main() level
+            29/68 (43%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   26    12   2  practica17.c
+    4     0   0  practica17.h
+  419     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84.h
+ 1352   359  72  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435   129  26  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+----- -----
+ 2296   500 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+ Inline        13             @MUL3232
+0    136  68    4    101  3.8  rand
+ Inline         5             @DIV1616
+0      9   4    4     39  2.1  srand
+0     51  26    8    333  3.9  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              500
+    Comments                843
+    Volume (V)              607
+    Difficulty (D)          9.5
+    Effort to implement (E) 5757
+    Time to implement (T)   5 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    98
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   196  824  
+
+
+

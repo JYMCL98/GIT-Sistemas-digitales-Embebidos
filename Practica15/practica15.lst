@@ -1,0 +1,126 @@
+CCS PCM C Compiler, Version 5.091, 13314               22-jul.-21 23:28
+
+               Filename:   C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica15\practica15.lst
+
+               ROM used:   66 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   17 (9%) at main() level
+                           17 (9%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <practica15.h>
+.................... #include <16F873.h>
+.................... //////////// Standard Header file for the PIC16F873 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F873
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... #use delay(crystal=4MHz)
+.................... 
+.................... 
+.................... #use standard_io(a)
+.................... #use standard_io(b)
+.................... 
+.................... void main()
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  BSF    03.5
+0008:  BSF    1F.0
+0009:  BSF    1F.1
+000A:  BSF    1F.2
+000B:  BCF    1F.3
+.................... {
+....................    set_tris_a(0b11111);
+000C:  MOVLW  1F
+000D:  MOVWF  05
+....................    set_tris_b(0x00);
+000E:  MOVLW  00
+000F:  MOVWF  06
+....................    int numeros[10] = {0x40,0x79,0x24,0x30,0x19,0x12,0x02,0x78,0x00,0x18};
+0010:  MOVLW  40
+0011:  BCF    03.5
+0012:  MOVWF  25
+0013:  MOVLW  79
+0014:  MOVWF  26
+0015:  MOVLW  24
+0016:  MOVWF  27
+0017:  MOVLW  30
+0018:  MOVWF  28
+0019:  MOVLW  19
+001A:  MOVWF  29
+001B:  MOVLW  12
+001C:  MOVWF  2A
+001D:  MOVLW  02
+001E:  MOVWF  2B
+001F:  MOVLW  78
+0020:  MOVWF  2C
+0021:  CLRF   2D
+0022:  MOVLW  18
+0023:  MOVWF  2E
+....................    int conteo=0;
+0024:  CLRF   2F
+....................    output_b(numeros[0]);
+0025:  BSF    03.5
+0026:  CLRF   06
+0027:  BCF    03.5
+0028:  MOVF   25,W
+0029:  MOVWF  06
+....................    
+....................    while(TRUE)
+....................    {
+....................       if (input_state(PIN_A0)==1)
+002A:  BTFSS  05.0
+002B:  GOTO   040
+....................       {
+....................          while(input_state(PIN_A0)){}
+002C:  BTFSS  05.0
+002D:  GOTO   02F
+002E:  GOTO   02C
+....................          conteo=conteo+1;
+002F:  MOVLW  01
+0030:  ADDWF  2F,F
+....................          if (conteo>=10)
+0031:  MOVF   2F,W
+0032:  SUBLW  09
+0033:  BTFSC  03.0
+0034:  GOTO   036
+....................          {
+....................             conteo=0;
+0035:  CLRF   2F
+....................          }
+....................          output_b(numeros[conteo]);
+0036:  MOVLW  25
+0037:  ADDWF  2F,W
+0038:  MOVWF  04
+0039:  MOVF   00,W
+003A:  MOVWF  30
+003B:  BSF    03.5
+003C:  CLRF   06
+003D:  BCF    03.5
+003E:  MOVF   30,W
+003F:  MOVWF  06
+....................       }
+0040:  GOTO   02A
+....................    }
+.................... 
+.................... }
+0041:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

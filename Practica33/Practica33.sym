@@ -1,0 +1,141 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     kbd
+008     lcdlat
+008     PSP_DATA
+008     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     kbd_getc.kbd_call_count
+021.0   kbd_getc.kbd_down
+022     kbd_getc.last_key
+023     kbd_getc.col
+024-025 strtok.save
+026-029 _Randseed
+02A-02B @sprintf_string
+02C     MAIN.k
+02D     MAIN.i
+02E-030 MAIN.data
+031-033 MAIN.clave
+034     MAIN.j
+035     kbd_getc.kchar
+035     lcd_init.i
+035     MAIN.@SCRATCH1
+035     @PSTRINGC7_693.@SCRATCH1
+036-039 lcd_init.LCD_INIT_STRING
+036     @PRINTF_U_693.P1
+036     kbd_getc.row
+036     @PSTRINGCN7_693.P1
+036     MAIN.@SCRATCH2
+036     @PSTRINGC7_693.@SCRATCH2
+037     @MUL88.P1
+037     @PRINTF_U_693.P2
+037     kbd_getc.@SCRATCH1
+037     @PSTRINGC7_693.@SCRATCH3
+037     @PSTRINGCN7_693.@SCRATCH1
+038     @MUL88.P1
+038     @DIV88.P2
+038     @PSTRINGC7_693.@SCRATCH4
+038     @PSTRINGCN7_693.@SCRATCH2
+039     @DIV88.P1
+039     @PSTRINGCN7_693.@SCRATCH3
+03A     lcd_putc.c
+03A     lcd_init.@SCRATCH1
+03A     @PSTRINGCN7_693.@SCRATCH4
+03A     @DIV88.@SCRATCH1
+03B     @delay_ms1.P1
+03B     lcd_gotoxy.x
+03C     lcd_gotoxy.y
+03D     lcd_gotoxy.address
+03E     lcd_gotoxy.@SCRATCH1
+03F     lcd_send_byte.address
+040     lcd_send_byte.n
+041     lcd_read_byte.low
+041     lcd_send_byte.@SCRATCH1
+042     lcd_read_byte.high
+042     lcd_send_nibble.n
+043     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+088     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  KEYS.call
+000008  KEYS.data
+000014  @const996.call
+00001E  @const1001.call
+000028  @const1011.call
+000032  @const1012.call
+00003C  @delay_ms1
+000051  lcd_send_nibble
+00005D  lcd_read_nibble
+000063  lcd_send_byte
+000069  lcd_read_byte
+0000A3  lcd_init
+0000E1  kbd_init
+0000E4  lcd_gotoxy
+0000F6  lcd_putc
+000122  @PSTRINGC7_693
+000178  kbd_getc
+0001C8  @MUL88
+000202  @PSTRINGCN7_693
+00025B  @DIV88
+000270  @PRINTF_U_693
+0002A7  @cinit1
+0002A7  MAIN
+0002B3  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica33\
+
+Project Files:
+    Practica33.c                                            [06-jul.-21 08:35  CRC=B3F9547A]
+    Practica33.h                                            [06-jul.-21 07:41  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [30-oct.-19 15:48  CRC=15D497A0]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-feb.-16 10:05  CRC=D1A6378A]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd.c [25-may.-15 22:33  CRC=7C81F56B]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [29-mar.-19 13:31  CRC=99D16202]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [30-ene.-19 12:26  CRC=897CEC6C]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [02-ago.-19 11:17  CRC=428BEDCB]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-ene.-08 15:55  CRC=2D1F019F]
+
+Source signature=D80E5886
+Program memory checksum=C4B4
+Hex file CRC=052A
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica33\Practica33 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica33.xsym
+    Errors:      Practica33.err
+    Ext Symbols: Practica33.esym
+    INHX8:       Practica33.hex
+    Symbols:     Practica33.sym
+    List:        Practica33.lst
+    Debug/COFF:  Practica33.cof
+    Project:     Practica33.ccspjt
+    Call Tree:   Practica33.tre
+    Statistics:  Practica33.STA

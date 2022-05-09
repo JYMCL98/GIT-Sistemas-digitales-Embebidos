@@ -1,0 +1,128 @@
+CCS PCM C Compiler, Version 5.091, 13314               22-jul.-21 21:03
+
+               Filename:   C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica14\Practica14.lst
+
+               ROM used:   77 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   17 (9%) at main() level
+                           17 (9%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include <Practica14.h>
+.................... #include <16F873.h>
+.................... //////////// Standard Header file for the PIC16F873 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F873
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... #use delay(crystal=4MHz)
+0004:  MOVLW  30
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   017
+0009:  MOVLW  01
+000A:  MOVWF  21
+000B:  CLRF   20
+000C:  DECFSZ 20,F
+000D:  GOTO   00C
+000E:  DECFSZ 21,F
+000F:  GOTO   00B
+0010:  MOVLW  4A
+0011:  MOVWF  20
+0012:  DECFSZ 20,F
+0013:  GOTO   012
+0014:  GOTO   015
+0015:  DECFSZ 00,F
+0016:  GOTO   009
+0017:  BCF    0A.3
+0018:  GOTO   049 (RETURN)
+.................... 
+.................... 
+.................... #use standard_io(b)
+.................... 
+.................... void main()
+0019:  MOVF   03,W
+001A:  ANDLW  1F
+001B:  MOVWF  03
+001C:  BSF    03.5
+001D:  BSF    1F.0
+001E:  BSF    1F.1
+001F:  BSF    1F.2
+0020:  BCF    1F.3
+.................... {
+....................    set_tris_b(0x00);
+0021:  MOVLW  00
+0022:  MOVWF  06
+....................    int numeros[10] = {0x40,0x79,0x24,0x30,0x19,0x12,0x02,0x78,0x00,0x18};
+0023:  MOVLW  40
+0024:  BCF    03.5
+0025:  MOVWF  25
+0026:  MOVLW  79
+0027:  MOVWF  26
+0028:  MOVLW  24
+0029:  MOVWF  27
+002A:  MOVLW  30
+002B:  MOVWF  28
+002C:  MOVLW  19
+002D:  MOVWF  29
+002E:  MOVLW  12
+002F:  MOVWF  2A
+0030:  MOVLW  02
+0031:  MOVWF  2B
+0032:  MOVLW  78
+0033:  MOVWF  2C
+0034:  CLRF   2D
+0035:  MOVLW  18
+0036:  MOVWF  2E
+....................    
+....................    while(TRUE)
+....................    {
+....................       for(int i=0; i<10; i++)
+0037:  CLRF   2F
+0038:  MOVF   2F,W
+0039:  SUBLW  09
+003A:  BTFSS  03.0
+003B:  GOTO   04B
+....................       {
+....................          output_b(numeros[i]);
+003C:  MOVLW  25
+003D:  ADDWF  2F,W
+003E:  MOVWF  04
+003F:  MOVF   00,W
+0040:  MOVWF  30
+0041:  BSF    03.5
+0042:  CLRF   06
+0043:  BCF    03.5
+0044:  MOVF   30,W
+0045:  MOVWF  06
+....................          delay_ms(200);
+0046:  MOVLW  C8
+0047:  MOVWF  30
+0048:  GOTO   004
+0049:  INCF   2F,F
+004A:  GOTO   038
+....................       }
+004B:  GOTO   037
+....................    }
+.................... 
+.................... }
+004C:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

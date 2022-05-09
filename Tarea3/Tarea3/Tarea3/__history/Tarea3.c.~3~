@@ -1,0 +1,49 @@
+#include <Tarea3.h>
+#include <lcd.c>
+//#use standard_io(a)
+//#use standard_io(b)
+//#use standard_io(c)
+
+int contador = 0;
+int16 lectura_ADC;
+int velocidad;
+
+//byte PORTB = 6
+//byte PORTC = 7
+
+byte const CW[8] = {0b1000, 0b1100, 0b0100, 0b0110, 0b0010, 0b0011, 0b0001, 0b1001};                      
+byte const CCW[8] ={0b1001, 0b0001, 0b0011, 0b0010, 0b0110, 0b0100, 0b1100, 0b1000};
+     
+void motor(){
+   
+delay_ms(velocidad);
+   
+}
+                          
+                          
+void main()
+{
+
+   SET_TRIS_C(0B11111111);                //Configura el puerto C
+   SET_TRIS_B(0B00000000);                //Configura el puerto B
+
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   while(TRUE)
+   {
+   
+      set_adc_channel(0);
+      delay_us(20);
+      lectura_adc = read_ADC();    
+      
+      velocidad = (lectura_ADC * 1000.0/1023);
+   
+   }
+
+}
+
+
+
+
+

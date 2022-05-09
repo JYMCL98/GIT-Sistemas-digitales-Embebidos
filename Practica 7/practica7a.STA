@@ -1,0 +1,46 @@
+
+ROM used:   205/1024 (20%)
+            205/1024 (20%) including unused fragments
+
+            0.4 Average locations per line
+            6.0 Average locations per statement
+
+RAM used:   5/68 (7%) at main() level
+            6/68 (9%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   54    34 100  practica7a.c
+    7     0   0  practica7a.h
+  420     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84A.h
+----- -----
+  481    34 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20  10    1             @delay_ms1
+0    181  88    1    824  1.9  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              34
+    Comments                73
+    Volume (V)              829
+    Difficulty (D)          1.9
+    Effort to implement (E) 1563
+    Time to implement (T)   1 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    110
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   201  819  
+
+
+

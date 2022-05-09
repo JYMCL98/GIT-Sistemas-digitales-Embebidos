@@ -1,0 +1,14 @@
+#include <Practica9.h>
+#use standard_io(b)
+
+void main()
+{
+
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}

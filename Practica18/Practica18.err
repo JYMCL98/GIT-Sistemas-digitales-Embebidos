@@ -1,0 +1,5 @@
+Compiling C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica18\Practica18 on 10-jun.-21 at 15:59
+>>> Warning 208 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica18\Practica18.c" Line 5(1,8): Function not void and does not return a value  ext_itr
+      Memory usage:   ROM=5%      RAM=6% - 6%
+      0 Errors,  1 Warnings.
+Build Successful.

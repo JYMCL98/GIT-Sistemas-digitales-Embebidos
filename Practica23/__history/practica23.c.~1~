@@ -1,0 +1,13 @@
+#include <practica23.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+
+
+		//TODO: User Code
+	}
+
+}

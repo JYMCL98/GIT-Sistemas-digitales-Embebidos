@@ -1,0 +1,9 @@
+ÀÄTarea3
+   ÀÄMAIN  0/73  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÀÄmotor  0/43  Ram=2
+         ÃÄ@const672  0/12  Ram=0
+         ÃÄ@const675  0/12  Ram=0
+         ÃÄ@delay_ms1  0/21  Ram=1
+         ÀÄ@delay_ms1  0/21  Ram=1

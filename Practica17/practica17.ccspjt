@@ -1,0 +1,45 @@
+[PROJECT]
+Target=practica17.hex
+Processor_Text=PIC16F84
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=practica17.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica17\practica17]
+Type=4
+[mru-list]
+1=practica17.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=10-06-2021
+D1_L=6
+D1_L1=[54686]Project Opened.
+D1_L2=[54691]Started Editing.
+D1_L3=[55540]Stopped Editing.
+D1_L4=[55680]Started Editing.
+D1_L5=[55733]Stopped Editing.
+TotalEdit=11
+TotalDebug=0
+D1_E=11
+D1_D=0
+D1_L6=[55735]Project Closed.
+
+[Opened Files]
+1=practica17.c
+t1=1
+Count=1
+[practica17.c]
+Type=4
+
+[defines]
+buildcount=4
+[Units]
+Count=1
+1=practica17 (main)

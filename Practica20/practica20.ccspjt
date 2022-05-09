@@ -1,0 +1,69 @@
+[PROJECT]
+Target=practica20.hex
+Processor_Text=PIC16F628A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=practica20.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica20\practica20]
+Type=4
+[mru-list]
+1=practica20.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=14-06-2021
+D1_L=10
+D1_L1=[53782]Project Opened.
+D1_L2=[53784]Started Editing.
+D1_L3=[54101]Stopped Editing.
+D1_L4=[54143]Started Editing.
+D1_L5=[54539]Stopped Editing.
+D1_L6=[55266]Started Editing.
+D1_L7=[55571]Stopped Editing.
+D1_L8=[55951]Started Editing.
+D1_L9=[56337]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L10=[56901]Project Closed.
+D2=24-07-2021
+D2_L=4
+D2_L1=[82294]Project Opened.
+D2_L2=[82307]Started Editing.
+D2_L3=[82610]Stopped Editing.
+D2_L4=[86145]Started Editing.
+D3=25-07-2021
+D3_L=6
+D3_L1=[52]Stopped Editing.
+D3_L2=[753]Started Editing.
+D3_L3=[1059]Stopped Editing.
+D3_L4=[2319]Started Editing.
+D3_L5=[2624]Stopped Editing.
+D3_E=1
+D3_D=0
+D3_L6=[4303]Project Closed.
+
+[Opened Files]
+1=practica20.c
+t1=1
+Count=3
+2=practica20.h
+t2=1
+3=..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t3=1
+[practica20.c]
+Type=4
+
+[defines]
+buildcount=14
+[Units]
+Count=1
+1=practica20 (main)

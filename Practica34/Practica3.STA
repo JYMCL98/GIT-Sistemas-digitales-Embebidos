@@ -1,0 +1,59 @@
+
+ROM used:   490/4096 (12%)
+            490/4096 (12%) including unused fragments
+
+            0.4 Average locations per line
+            5.3 Average locations per statement
+
+RAM used:   7/191 (4%) at main() level
+            22/191 (12%) worst case
+
+Stack used: 4 worst case (4 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   20     8   9  Practica3.c
+    4     0   0  Practica3.h
+  643     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F873A.h
+  456    84  91  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+----- -----
+ 1123    92 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   4    1             @delay_ms1
+ Inline         3    596  5.9  lcd_read_byte
+0      6   1    0     59  4.2  lcd_read_nibble
+0     12   2    1    179  3.3  lcd_send_nibble
+0     64  13    3    460  4.7  lcd_send_byte
+0     60  12    6    814  7.2  lcd_init
+0     18   4    4    208  6.3  lcd_gotoxy
+0     44   9    1    354  4.7  lcd_putc
+0     55  11    1    181  3.8  MAIN
+0     10   2    0    136  2.0  @const692
+0     88  18    5             @PSTRINGCN7_676
+0     21   4    3             @DIV88
+0     88  18    6             @PRINTF_D_676
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              92
+    Comments                216
+    Volume (V)              4630
+    Difficulty (D)          41.0
+    Effort to implement (E) 189963
+    Time to implement (T)   2 hours, 56 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   9
+    Maintainability (MI)    149
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   486  1558  
+00800-00FFF     0  2048  
+
+
+

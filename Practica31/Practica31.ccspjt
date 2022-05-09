@@ -1,0 +1,49 @@
+[PROJECT]
+Target=Practica31.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica31.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica31\Practica31]
+Type=4
+[mru-list]
+1=Practica31.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=02-07-2021
+D1_L=6
+D1_L1=[27572]Project Opened.
+D1_L2=[27743]Started Editing.
+D1_L3=[28872]Stopped Editing.
+D1_L4=[30066]Started Editing.
+D1_L5=[30592]Stopped Editing.
+TotalEdit=18
+TotalDebug=0
+D1_E=18
+D1_D=0
+D1_L6=[42362]Project Closed.
+D2=04-07-2021
+D2_L=2
+D2_L1=[58963]Project Opened.
+D2_L2=[58997]Project Closed.
+
+[Opened Files]
+1=Practica31.c
+t1=1
+Count=1
+[Practica31.c]
+Type=4
+
+[defines]
+buildcount=5
+[Units]
+Count=1
+1=Practica31 (main)

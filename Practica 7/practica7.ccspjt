@@ -1,0 +1,65 @@
+[PROJECT]
+Target=C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.hex
+Processor_Text=PIC16F84A
+CCSVerions=5.091
+Compiler=PCM
+[Target Data]
+FileList=practica7.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7]
+Type=4
+[mru-list]
+1=practica7.c
+[Units]
+Count=1
+1=practica7 (main)
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=7
+D1=31-05-2021
+D1_L=4
+D1_L1=[53545]Project Opened.
+D1_L2=[53563]Started Editing.
+D1_L3=[54058]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L4=[55122]Project Closed.
+D2=23-06-2021
+D2_L=2
+D2_L1=[58551]Project Opened.
+D2_L2=[79136]Project Closed.
+D3=24-06-2021
+D3_L=2
+D3_L1=[51534]Project Opened.
+D3_L2=[53973]Project Closed.
+D4=26-06-2021
+D4_L=4
+D4_L1=[49855]Project Opened.
+D4_L2=[49882]Started Editing.
+D4_L3=[50184]Stopped Editing.
+D4_E=1
+D4_D=0
+D4_L4=[71585]Project Closed.
+D5=28-06-2021
+D5_L=2
+D5_L1=[51963]Project Opened.
+D5_L2=[52513]Project Closed.
+D6=01-07-2021
+D6_L=2
+D6_L1=[53909]Project Opened.
+D6_L2=[54404]Project Closed.
+D7=11-07-2021
+D7_L=2
+D7_L1=[44843]Project Opened.
+D7_L2=[44876]Project Closed.
+
+[Opened Files]
+1=practica7.c
+t1=1
+Count=1

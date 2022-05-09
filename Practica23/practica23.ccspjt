@@ -1,0 +1,63 @@
+[PROJECT]
+Target=practica23.hex
+Processor_Text=PIC16F873A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=practica23.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica23\practica23]
+Type=4
+[mru-list]
+1=practica23.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=21-06-2021
+D1_L=10
+D1_L1=[52868]Project Opened.
+D1_L2=[52898]Started Editing.
+D1_L3=[53513]Stopped Editing.
+D1_L4=[54285]Started Editing.
+D1_L5=[55166]Stopped Editing.
+D1_L6=[55197]Started Editing.
+D1_L7=[55741]Stopped Editing.
+D1_L8=[56274]Started Editing.
+D1_L9=[56574]Stopped Editing.
+TotalEdit=20
+TotalDebug=0
+D1_E=20
+D1_D=0
+D1_L10=[59116]Project Closed.
+D2=22-06-2021
+D2_L=2
+D2_L1=[27098]Project Opened.
+D2_L2=[27601]Project Closed.
+D3=25-07-2021
+D3_L=4
+D3_L1=[13228]Project Opened.
+D3_L2=[62236]Project Closed.
+D3_L3=[67696]Project Opened.
+D3_L4=[70802]Project Closed.
+
+[Opened Files]
+1=practica23.c
+t1=1
+Count=2
+2=practica23.h
+t2=1
+3=practica23.h
+t3=1
+[practica23.c]
+Type=4
+
+[defines]
+buildcount=7
+[Units]
+Count=1
+1=practica23 (main)

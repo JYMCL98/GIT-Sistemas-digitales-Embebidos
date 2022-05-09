@@ -1,0 +1,50 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+009-00A @READ_PROGRAM_MEMORY8.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+011     main.@SCRATCH1
+012     @delay_ms1.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000018  @cinit1
+000018  main
+00001B  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica32\
+
+Project Files:
+    Practica32.c                                            [05-jul.-21 15:42  CRC=BD077597]
+    Practica32.h                                            [05-jul.-21 15:03  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84A.h [30-oct.-19 15:47  CRC=003106DB]
+
+Source signature=BD69834D
+Program memory checksum=0000
+Hex file CRC=C9D6
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica32\Practica32 (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica32.xsym
+    Errors:      Practica32.err
+    Ext Symbols: Practica32.esym
+    INHX8:       Practica32.hex
+    Symbols:     Practica32.sym
+    List:        Practica32.lst
+    Debug/COFF:  Practica32.cof
+    Project:     Practica32.ccspjt
+    Call Tree:   Practica32.tre
+    Statistics:  Practica32.STA

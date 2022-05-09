@@ -1,0 +1,23 @@
+#include <practica22.h>
+#include <lcd.c>
+
+
+void main()
+{
+   lcd_init();
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   int16 lectura_ADC;
+   
+   while(TRUE)
+   {
+      set_adc_channel(0);
+      delay_us(20);
+      lectura_ADC = read_adc();
+      
+      lcd_gotoxy(1,1);
+      printf(lcd_putc,"Convertidor ADC = %4ld", lectura_ADC);
+      delay_ms(100);
+   }
+
+}

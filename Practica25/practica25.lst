@@ -1,0 +1,146 @@
+CCS PCM C Compiler, Version 5.091, 13314               24-jun.-21 15:30
+
+               Filename:   C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica25\practica25.lst
+
+               ROM used:   73 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           6 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <practica25.h>
+.................... #include <16F876A.h>
+.................... //////////// Standard Header file for the PIC16F876A device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F876A
+.................... 
+.................... #list
+.................... 
+.................... #use delay(crystal=4MHz)
+.................... 
+.................... 
+.................... #use standard_io(c)
+.................... 
+.................... 
+.................... void main()
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  FF
+0008:  MOVWF  20
+0009:  BSF    03.5
+000A:  BSF    1F.0
+000B:  BSF    1F.1
+000C:  BSF    1F.2
+000D:  BCF    1F.3
+000E:  MOVLW  07
+000F:  MOVWF  1C
+0010:  BCF    03.7
+.................... {
+....................    set_tris_a(0b11111);
+0011:  MOVLW  1F
+0012:  MOVWF  05
+....................    set_tris_c(0b00000000);
+0013:  MOVLW  00
+0014:  MOVWF  07
+0015:  BCF    03.5
+0016:  MOVWF  20
+....................    output_high(PIN_C2);       // Se factoriza para optimizar el codigo
+0017:  BCF    20.2
+0018:  MOVF   20,W
+0019:  BSF    03.5
+001A:  MOVWF  07
+001B:  BCF    03.5
+001C:  BSF    07.2
+....................    
+....................    while(TRUE)
+....................    {
+....................       //PIN_C0---Enable
+....................       //PIN_C1---1A
+....................       //PIN_C2---2A
+....................       
+....................       //PIN_A0---Control de giro a la derecha
+....................       //PINA_1---Control de giro a la izquierda
+....................       
+....................       if(input_state(PIN_A0))
+001D:  BTFSS  05.0
+001E:  GOTO   02C
+....................       {
+....................          //output_high(PIN_C0);
+....................          output_low(PIN_C0);
+001F:  BCF    20.0
+0020:  MOVF   20,W
+0021:  BSF    03.5
+0022:  MOVWF  07
+0023:  BCF    03.5
+0024:  BCF    07.0
+....................          output_high(PIN_C1);
+0025:  BCF    20.1
+0026:  MOVF   20,W
+0027:  BSF    03.5
+0028:  MOVWF  07
+0029:  BCF    03.5
+002A:  BSF    07.1
+....................       }
+002B:  GOTO   047
+....................       else if (input_state(PIN_A1))
+002C:  BTFSS  05.1
+002D:  GOTO   03B
+....................       {
+....................          //output_high(PIN_C0);
+....................          output_high(PIN_C0);
+002E:  BCF    20.0
+002F:  MOVF   20,W
+0030:  BSF    03.5
+0031:  MOVWF  07
+0032:  BCF    03.5
+0033:  BSF    07.0
+....................          output_low(PIN_C1);
+0034:  BCF    20.1
+0035:  MOVF   20,W
+0036:  BSF    03.5
+0037:  MOVWF  07
+0038:  BCF    03.5
+0039:  BCF    07.1
+....................       }
+003A:  GOTO   047
+....................       else
+....................       {
+....................          //output_high(PIN_C0);
+....................          output_low(PIN_C0);
+003B:  BCF    20.0
+003C:  MOVF   20,W
+003D:  BSF    03.5
+003E:  MOVWF  07
+003F:  BCF    03.5
+0040:  BCF    07.0
+....................          output_low(PIN_C1);
+0041:  BCF    20.1
+0042:  MOVF   20,W
+0043:  BSF    03.5
+0044:  MOVWF  07
+0045:  BCF    03.5
+0046:  BCF    07.1
+....................       }
+0047:  GOTO   01D
+....................       
+....................    }
+.................... 
+.................... }
+0048:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

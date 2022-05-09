@@ -1,0 +1,137 @@
+CCS PCM C Compiler, Version 5.091, 13314               24-jul.-21 22:51
+
+               Filename:   C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica19\Practica19.lst
+
+               ROM used:   80 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   12 (3%) at main() level
+                           12 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   038
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  BTFSS  0B.5
+0018:  GOTO   01B
+0019:  BTFSC  0B.2
+001A:  GOTO   02C
+001B:  MOVF   22,W
+001C:  MOVWF  04
+001D:  MOVF   23,W
+001E:  MOVWF  77
+001F:  MOVF   24,W
+0020:  MOVWF  78
+0021:  MOVF   25,W
+0022:  MOVWF  79
+0023:  MOVF   26,W
+0024:  MOVWF  7A
+0025:  MOVF   20,W
+0026:  MOVWF  0A
+0027:  SWAPF  21,W
+0028:  MOVWF  03
+0029:  SWAPF  7F,F
+002A:  SWAPF  7F,W
+002B:  RETFIE
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   02F
+.................... #include <Practica19.h>
+.................... #include <16F876A.h>
+.................... //////////// Standard Header file for the PIC16F876A device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F876A
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... #use delay(crystal=4MHz)
+.................... 
+.................... 
+.................... #use standard_io(b)
+.................... 
+.................... #INT_TIMER0
+.................... void timer0_isr()
+.................... {
+....................    output_toggle(PIN_B0);
+002F:  BSF    03.5
+0030:  BCF    06.0
+0031:  MOVLW  01
+0032:  BCF    03.5
+0033:  XORWF  06,F
+0034:  BCF    0B.2
+0035:  BCF    0A.3
+0036:  BCF    0A.4
+0037:  GOTO   01B
+.................... }
+.................... 
+.................... void main()
+0038:  MOVF   03,W
+0039:  ANDLW  1F
+003A:  MOVWF  03
+003B:  BSF    03.5
+003C:  BSF    1F.0
+003D:  BSF    1F.1
+003E:  BSF    1F.2
+003F:  BCF    1F.3
+0040:  MOVLW  07
+0041:  MOVWF  1C
+0042:  BCF    03.7
+.................... {
+....................    set_tris_b(0x00);
+0043:  MOVLW  00
+0044:  MOVWF  06
+....................    
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_2);
+0045:  MOVF   01,W
+0046:  ANDLW  C0
+0047:  MOVWF  01
+....................    set_timer0(0x18);  // 24 en decimal 
+0048:  MOVLW  18
+0049:  BCF    03.5
+004A:  MOVWF  01
+....................    enable_interrupts(INT_TIMER0);
+004B:  BSF    0B.5
+....................    enable_interrupts(GLOBAL);
+004C:  MOVLW  C0
+004D:  IORWF  0B,F
+....................    
+....................    while(TRUE)
+....................    {
+004E:  GOTO   04E
+....................       
+....................    }
+.................... 
+.................... }
+004F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

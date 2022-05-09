@@ -1,0 +1,19 @@
+#include <Tarea3.h>
+#include <lcd.c>
+
+void main()
+{
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+
+   while(TRUE)
+   {
+      
+   
+   
+   
+   
+   
+   }
+
+}

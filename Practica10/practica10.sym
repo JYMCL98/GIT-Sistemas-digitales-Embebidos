@@ -1,0 +1,54 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+021     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+00001E  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica10\
+
+Project Files:
+    practica10.c                                            [22-jul.-21 09:53  CRC=F86FF1A3]
+    practica10.h                                            [01-jun.-21 08:30  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F628A.h [30-oct.-19 15:47  CRC=DE83A0C3]
+
+Source signature=B5773329
+Program memory checksum=0000
+Hex file CRC=FAC8
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica10\practica10 (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   practica10.xsym
+    Errors:      practica10.err
+    Ext Symbols: practica10.esym
+    INHX8:       practica10.hex
+    Symbols:     practica10.sym
+    List:        practica10.lst
+    Debug/COFF:  practica10.cof
+    Project:     practica10.ccspjt
+    Call Tree:   practica10.tre
+    Statistics:  practica10.STA

@@ -1,0 +1,123 @@
+#include <Tarea2.h>
+#define LCD_RS_PIN      PIN_B1
+#define LCD_RW_PIN      PIN_B2
+#define LCD_ENABLE_PIN  PIN_B3
+#define LCD_DATA4       PIN_B4
+#define LCD_DATA5       PIN_B5
+#define LCD_DATA6       PIN_B6
+#define LCD_DATA7       PIN_B7
+#include <lcd.c>
+#use standard_io(b)
+
+// Declaración de variable
+int contador = 217;  // variable contadora a decrementar
+int s_1 = 0;  // segundo 1
+int s_2 = 0;  // segundo 2
+int m_1 = 0;  // minuto 1
+int m_2 = 0;  // minuto 2
+int h_1 = 0;  // hora 1
+int h_2 = 0;  // hora 2
+
+
+//Caracteres animados
+int bomba1[8]={4,4,27,4,4,0,0,0};
+int bomba2[8]={0,25,6,0,0,0,0,0};
+int bomba3[8]={0,19,12,0,0,0,0,0};
+int bomba4[8]={0,6,25,0,0,0,0,0};
+int bomba5[8]={0,12,19,0,0,0,0,0};
+int bomba6[8]={0,24,4,14,31,31,14,0};
+
+int exp1[8]={21,10,21,10,21,10,21,0};
+
+
+
+
+void bici(){
+   
+   lcd_gotoxy(1,1);
+   printf(lcd_putc,"Hora: %d%d:%d%d:%d%d", h_1,h_2,m_1,m_2,s_1,s_2);  // escribe la hora
+   lcd_gotoxy(1,2);
+   printf(lcd_putc,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 0, 1, 2, 3, 4,  1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 5);
+   for(int i=0; i<=16;i++){  // recorre la segunda fila de izquierda a derecha
+      
+      lcd_gotoxy(1,1);
+      printf(lcd_putc,"Hora: %d%d:%d%d:%d%d", h_1,h_2,m_1,m_2,s_1,s_2);  // escribe la hora
+      lcd_gotoxy(i,2);  // columna, fila
+      printf(lcd_putc," %c",0);
+      delay_ms(200);
+  
+      if (i==15){
+         lcd_gotoxy(0,2);
+         printf(lcd_putc,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c",6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6);
+         delay_ms(200);
+      }
+   }
+    
+}
+
+#INT_TIMER0
+void reloj(){  //interrupción interna
+   contador--;  // decrementa el contador
+   set_timer0(238);  //este es el valor de seteo del timer
+   
+   if(contador==0){  // Si llega a cero, se cumplió 1 s
+      s_2++;  // Cuando el contador llega a 0 transcurre un segundo
+      contador=217;  // Inicializa el contador para el próximo periodo
+      
+      if(s_2 == 10) {  // si el segundo de la derecha llega a 10
+         s_2 = 0;  // se reinicia el valor del segundo de la derecha
+         s_1++;  // aumenta el segundo de la izquierda
+         
+         if(s_1 == 6){  // si el segundo de la izquierda es 6 se ha cumplido un minuto
+            s_1 = 0;  // se reinicia el valor del segundo de la izquierda
+            m_2++;  // aumneta en 1 el minuto
+            
+            if(m_2 == 10)  {  // si el minuto de la derecha llega a 10
+               m_2 = 0;  // se reinicia el valor del minuto de la derecha
+               m_1++;  // el valor del minuto de la izquierda aumenta
+               
+               if(m_1 == 6) {  // si el valor del minuto de la izquierda llega a 6 ha pasado una hora               
+                  m_1 = 0;  // el minuto de la izquierda se reinicia
+                  h_2++;  // aumenta una hora
+                  
+                  if(h_2 == 10) {  // si la hora de la derecha llega a 10
+                     h_1++;  // aumenta en 1 la hora de la izquierda
+                     h_2 = 0;  // se reinicia el valor de la derecha
+                     
+                     if(h_1==12) {  // si el valor de hora izquierda llega a 12
+                        h_1 = 0;  // se reinicia el reloj 
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+void main()
+{
+   lcd_init();  // Esta función es utilizada para inicializar la lcd en su modo de 8 bits
+   // Declaramos los caracteres especiales en la memoria
+   lcd_set_cgram_char(0,bomba1);
+   lcd_set_cgram_char(1,bomba2);
+   lcd_set_cgram_char(2,bomba3);
+   lcd_set_cgram_char(3,bomba4);
+   lcd_set_cgram_char(4,bomba5);
+   lcd_set_cgram_char(5,bomba6);
+   lcd_set_cgram_char(6,exp1);
+   
+   lcd_gotoxy(1,1);
+   
+   // Establecemos al puerto B como salidas
+   set_tris_b(0x00);
+   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_256);  // reloj interno del micro y el preescalador de 256
+   enable_interrupts(INT_TIMER0); // habilitación de las interrupciones de manera interna
+   enable_interrupts(GLOBAL);  // habilitar todas las interrupciones
+
+   while(TRUE)
+   {
+      bici();
+   }
+}

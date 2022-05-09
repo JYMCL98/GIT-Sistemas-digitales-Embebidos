@@ -1,0 +1,160 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+025-026 MAIN.lectura_ADC
+027-02A MAIN.valor_voltaje
+02B-02E MAIN.valor_corriente
+02F-032 MAIN.sensibilidad
+033-034 @ITOF.P1
+033     lcd_init.i
+033-034 @PRINTF_LU_673.P1
+033     @PSTRINGCN7_673.P2
+033-036 @PRINTF_L32D_673FPFPF.P3
+033-036 @ADDFF.P4
+033     MAIN.@SCRATCH1
+034-037 lcd_init.LCD_INIT_STRING
+034     MAIN.@SCRATCH2
+034     @PSTRINGCN7_673.@SCRATCH1
+035     MAIN.@SCRATCH3
+035     @PSTRINGCN7_673.@SCRATCH2
+035     @PRINTF_LU_673.@SCRATCH1
+036     MAIN.@SCRATCH4
+036     @PSTRINGCN7_673.@SCRATCH3
+036     @PRINTF_LU_673.@SCRATCH2
+037-03A @ADDFF.P1
+037-03A @DIVFF.P2
+037     @PRINTF_L32D_673FPFPF.P3
+037     @PSTRINGCN7_673.@SCRATCH4
+037     @PRINTF_LU_673.@SCRATCH3
+038     lcd_init.@SCRATCH1
+038     @PRINTF_LU_673.@SCRATCH4
+038     @PRINTF_L32D_673FPFPF.@SCRATCH1
+039     @PRINTF_LU_673.@SCRATCH5
+039     @PRINTF_L32D_673FPFPF.@SCRATCH2
+03A     @PRINTF_LU_673.@SCRATCH6
+03A     @PRINTF_L32D_673FPFPF.@SCRATCH3
+03B-03E @DIVFF.P1
+03B     @ADDFF.@SCRATCH1
+03B     @PRINTF_L32D_673FPFPF.@SCRATCH4
+03C     @ADDFF.@SCRATCH2
+03C     @PRINTF_L32D_673FPFPF.@SCRATCH5
+03D     @ADDFF.@SCRATCH3
+03D     @PRINTF_L32D_673FPFPF.@SCRATCH6
+03E-041 @FTOSD.P1
+03E     lcd_putc.c
+03E-041 @MULFF.P1
+03E-041 @DIV3232.P2
+03E     @ADDFF.@SCRATCH4
+03F     @delay_ms1.P1
+03F     lcd_gotoxy.x
+03F     @DIVFF.@SCRATCH1
+03F     @ADDFF.@SCRATCH5
+040     lcd_gotoxy.y
+040     @DIVFF.@SCRATCH2
+040     @ADDFF.@SCRATCH6
+041     lcd_gotoxy.address
+041     @DIVFF.@SCRATCH3
+041     @ADDFF.@SCRATCH7
+042-045 @DIV3232.P1
+042-045 @MULFF.P2
+042     lcd_gotoxy.@SCRATCH1
+042     @DIVFF.@SCRATCH4
+042     @ADDFF.@SCRATCH8
+042     @FTOSD.@SCRATCH1
+043     lcd_send_byte.address
+043     @DIVFF.@SCRATCH5
+044     lcd_send_byte.n
+044     @DIVFF.@SCRATCH6
+045     lcd_read_byte.low
+045     lcd_send_byte.@SCRATCH1
+046     lcd_read_byte.high
+046     lcd_send_nibble.n
+046     @MULFF.@SCRATCH1
+046     @DIV3232.@SCRATCH1
+047     lcd_read_byte.@SCRATCH1
+047     @MULFF.@SCRATCH2
+047     @DIV3232.@SCRATCH2
+048     @MULFF.@SCRATCH3
+048     @DIV3232.@SCRATCH3
+049     @MULFF.@SCRATCH4
+049     @DIV3232.@SCRATCH4
+04A     @MULFF.@SCRATCH5
+04A     @DIV3232.@SCRATCH5
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const703.call
+000009  @const708.call
+000010  @delay_ms1
+000024  lcd_send_nibble
+000030  lcd_read_nibble
+000036  lcd_send_byte
+00003C  lcd_read_byte
+000076  lcd_init
+0000B2  @ITOF
+0000D0  @MULFF
+000145  @DIVFF
+00020F  @ADDFF
+00034E  lcd_gotoxy
+000360  lcd_putc
+00038C  @PSTRINGCN7_673
+0003E3  @PRINTF_LU_673
+00043C  @DIV3232
+00048A  @PRINTF_L32D_673FPFPF
+0004B1  @FTOSD
+00056A  MAIN
+00056A  @cinit1
+000574  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica23\
+
+Project Files:
+    practica23.c                                            [21-jun.-21 15:38  CRC=79EC4CC8]
+    practica23.h                                            [21-jun.-21 15:23  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F873A.h [30-oct.-19 15:48  CRC=E9A13BDC]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-feb.-16 10:05  CRC=D1A6378A]
+
+Source signature=06D9F7B8
+Program memory checksum=0000
+Hex file CRC=2A5B
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica23\practica23 (main)
+
+Compiler Settings:
+    Processor:      PIC16F873A
+    Pointer Size:   8
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   practica23.xsym
+    Errors:      practica23.err
+    Ext Symbols: practica23.esym
+    INHX8:       practica23.hex
+    Symbols:     practica23.sym
+    List:        practica23.lst
+    Debug/COFF:  practica23.cof
+    Project:     practica23.ccspjt
+    Call Tree:   practica23.tre
+    Statistics:  practica23.STA

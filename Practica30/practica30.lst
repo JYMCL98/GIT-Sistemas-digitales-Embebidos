@@ -1,0 +1,163 @@
+CCS PCM C Compiler, Version 5.091, 13314               29-jun.-21 08:08
+
+               Filename:   C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica30\practica30.lst
+
+               ROM used:   102 words (10%)
+                           Largest free fragment is 922
+               RAM used:   5 (7%) at main() level
+                           6 (9%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   018
+0003:  NOP
+.................... #include <practica30.h>
+.................... #include <16F84A.h>
+.................... //////////// Standard Header file for the PIC16F84A device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F84A
+.................... 
+.................... #list
+.................... 
+.................... #use delay(crystal=4MHz)
+0004:  MOVLW  12
+0005:  MOVWF  04
+0006:  MOVF   00,W
+0007:  BTFSC  03.2
+0008:  GOTO   017
+0009:  MOVLW  01
+000A:  MOVWF  0D
+000B:  CLRF   0C
+000C:  DECFSZ 0C,F
+000D:  GOTO   00C
+000E:  DECFSZ 0D,F
+000F:  GOTO   00B
+0010:  MOVLW  4A
+0011:  MOVWF  0C
+0012:  DECFSZ 0C,F
+0013:  GOTO   012
+0014:  GOTO   015
+0015:  DECFSZ 00,F
+0016:  GOTO   009
+0017:  RETURN
+.................... 
+.................... 
+.................... #use standard_io(b)
+.................... 
+.................... void main()
+0018:  MOVF   03,W
+0019:  ANDLW  1F
+001A:  MOVWF  03
+.................... {
+....................    set_tris_b(0b00000000);
+001B:  MOVLW  00
+001C:  BSF    03.5
+001D:  MOVWF  06
+....................    output_b(0b00000000);
+001E:  CLRF   06
+001F:  BCF    03.5
+0020:  CLRF   06
+....................    while(TRUE)
+....................    {
+....................    
+....................       
+....................       output_high(PIN_B0);
+0021:  BSF    03.5
+0022:  BCF    06.0
+0023:  BCF    03.5
+0024:  BSF    06.0
+....................       delay_ms(2000);
+0025:  MOVLW  08
+0026:  MOVWF  11
+0027:  MOVLW  FA
+0028:  MOVWF  12
+0029:  CALL   004
+002A:  DECFSZ 11,F
+002B:  GOTO   027
+....................       output_low(PIN_B0);
+002C:  BSF    03.5
+002D:  BCF    06.0
+002E:  BCF    03.5
+002F:  BCF    06.0
+....................       
+....................       output_high(PIN_B1);
+0030:  BSF    03.5
+0031:  BCF    06.1
+0032:  BCF    03.5
+0033:  BSF    06.1
+....................       delay_ms(1000);
+0034:  MOVLW  04
+0035:  MOVWF  11
+0036:  MOVLW  FA
+0037:  MOVWF  12
+0038:  CALL   004
+0039:  DECFSZ 11,F
+003A:  GOTO   036
+....................       output_low(PIN_B1);
+003B:  BSF    03.5
+003C:  BCF    06.1
+003D:  BCF    03.5
+003E:  BCF    06.1
+....................       delay_ms(300);
+003F:  MOVLW  02
+0040:  MOVWF  11
+0041:  MOVLW  96
+0042:  MOVWF  12
+0043:  CALL   004
+0044:  DECFSZ 11,F
+0045:  GOTO   041
+....................       output_high(PIN_B1);
+0046:  BSF    03.5
+0047:  BCF    06.1
+0048:  BCF    03.5
+0049:  BSF    06.1
+....................       delay_ms(300);
+004A:  MOVLW  02
+004B:  MOVWF  11
+004C:  MOVLW  96
+004D:  MOVWF  12
+004E:  CALL   004
+004F:  DECFSZ 11,F
+0050:  GOTO   04C
+....................       output_low(PIN_B1);
+0051:  BSF    03.5
+0052:  BCF    06.1
+0053:  BCF    03.5
+0054:  BCF    06.1
+....................       
+....................       output_high(PIN_B2);
+0055:  BSF    03.5
+0056:  BCF    06.2
+0057:  BCF    03.5
+0058:  BSF    06.2
+....................       delay_ms(2000);
+0059:  MOVLW  08
+005A:  MOVWF  11
+005B:  MOVLW  FA
+005C:  MOVWF  12
+005D:  CALL   004
+005E:  DECFSZ 11,F
+005F:  GOTO   05B
+....................       output_low(PIN_B2);
+0060:  BSF    03.5
+0061:  BCF    06.2
+0062:  BCF    03.5
+0063:  BCF    06.2
+0064:  GOTO   021
+....................    }
+.................... 
+.................... }
+0065:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3FF1   XT NOWDT PUT NOPROTECT

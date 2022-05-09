@@ -1,0 +1,65 @@
+
+ROM used:   1251/4096 (31%)
+            1251/4096 (31%) including unused fragments
+
+            1.1 Average locations per line
+            12.4 Average locations per statement
+
+RAM used:   12/191 (6%) at main() level
+            36/191 (19%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   35    17  17  pratica35.c
+    5     0   0  pratica35.h
+  643     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F873A.h
+  456    84  83  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+----- -----
+ 1139   101 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   2    1             @delay_ms1
+ Inline         3    596  5.9  lcd_read_byte
+0      6   0    0     59  4.2  lcd_read_nibble
+0     12   1    1    179  3.3  lcd_send_nibble
+0     64   5    3    460  4.7  lcd_send_byte
+0     60   5    6    814  7.2  lcd_init
+0     18   1    4    208  6.3  lcd_gotoxy
+0     44   4    1    354  4.7  lcd_putc
+0    150  12    6    494  3.3  MAIN
+0     30   2    2    288  6.0  @ITOF
+0      8   1    0    200  5.5  @const697
+0     87   7    5    346  7.5  @PSTRINGCN7_673
+0    118   9    8    318  6.5  @PRINTF_LD_673
+0     10   1    0    129  4.6  @const702
+0    117   9   13    496  8.2  @MULFF
+0     31   2    5    503  9.7  @FTOSD
+0     78   6   13             @DIV3232
+0    195  16   11             @PRINTF_L32D_673FPFPF
+0    199  16   11    224  6.7  @PRINTF_L32D_9600_62_63FPFPF
+ Inline         0    233  3.5  @cinit1
+
+Program metrics:
+    Functions               17
+    Statements              101
+    Comments                216
+    Volume (V)              10243
+    Difficulty (D)          97.5
+    Effort to implement (E) 998539
+    Time to implement (T)   15 hours, 25 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   28
+    Maintainability (MI)    74
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF  1247  797  
+00800-00FFF     0  2048  
+
+
+

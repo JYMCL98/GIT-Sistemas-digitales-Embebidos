@@ -1,0 +1,21 @@
+#include <Practica32.h>
+#use standard_io(a)
+
+void main()
+{
+   set_tris_a(0b00000000);
+   output_a(0b00000000);
+   while(TRUE)
+   {
+      // Giro a la derecha
+      output_high(PIN_A0);
+      delay_ms(1000);
+      output_low(PIN_A0);
+      delay_ms(200);
+      // Giro a la izquierda
+      output_high(PIN_A1);
+      delay_ms(1000);
+      output_low(PIN_A1);
+      delay_ms(200);
+   }
+}

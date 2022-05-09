@@ -1,0 +1,50 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+009-00A @READ_PROGRAM_MEMORY8.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+011     main.@SCRATCH1
+012     @delay_ms1.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000018  @cinit1
+000018  main
+00001B  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\
+
+Project Files:
+    practica7a.c                                            [31-may.-21 15:20  CRC=EF09AEC3]
+    practica7a.h                                            [11-jul.-21 12:32  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84A.h [30-oct.-19 15:47  CRC=003106DB]
+
+Source signature=EF6BBC79
+Program memory checksum=0000
+Hex file CRC=F7C9
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7a (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   practica7a.xsym
+    Errors:      practica7a.err
+    Ext Symbols: practica7a.esym
+    INHX8:       practica7a.hex
+    Symbols:     practica7a.sym
+    List:        practica7a.lst
+    Debug/COFF:  practica7a.cof
+    Project:     practica7a.ccspjt
+    Call Tree:   practica7a.tre
+    Statistics:  practica7a.STA

@@ -1,0 +1,20 @@
+#include <Practica33.h>
+#define LCD_DATA_PORT getenv("SFR:PORTD")
+#define use_portb_kbd TRUE
+#include <lcd.c>
+#include <kbd.c>
+#include <stdlib.h>
+
+#rom 0x2100 = {'1','2','3'}
+
+void main()
+{
+
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}

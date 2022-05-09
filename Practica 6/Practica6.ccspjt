@@ -1,0 +1,47 @@
+[PROJECT]
+Target=Practica6.hex
+Processor_Text=PIC16F628A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica6.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 6\Practica6]
+Type=4
+[mru-list]
+1=Practica6.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=10-07-2021
+D1_L=3
+D1_L1=[52446]Project Opened.
+D1_L2=[56681]Started Editing.
+D1_L3=[56981]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D2=11-07-2021
+D2_E=1
+D2_D=0
+D2_L=1
+D2_L1=[44843]Project Closed.
+
+[Opened Files]
+1=Practica6.c
+t1=1
+Count=2
+2=Practica6.h
+t2=1
+[Practica6.c]
+Type=4
+[Units]
+Count=1
+1=Practica6 (main)
+
+[defines]
+buildcount=1

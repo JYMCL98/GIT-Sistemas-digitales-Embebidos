@@ -1,0 +1,57 @@
+[PROJECT]
+Target=Practica18.hex
+Processor_Text=PIC16F628
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica18.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica18\Practica18]
+Type=4
+[mru-list]
+1=Practica18.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=4
+D1=10-06-2021
+D1_L=4
+D1_L1=[56656]Project Opened.
+D1_L2=[56670]Started Editing.
+D1_L3=[57705]Stopped Editing.
+TotalEdit=13
+TotalDebug=0
+D1_E=13
+D1_D=0
+D1_L4=[62751]Project Closed.
+D2=11-06-2021
+D2_L=2
+D2_L1=[26933]Project Opened.
+D2_L2=[29806]Project Closed.
+D3=23-07-2021
+D3_L=1
+D3_L1=[75977]Project Opened.
+D4=24-07-2021
+D4_L=3
+D4_L1=[8116]Project Closed.
+D4_L2=[54617]Project Opened.
+D4_L3=[66554]Project Closed.
+
+[Opened Files]
+1=Practica18.c
+t1=1
+Count=2
+2=Practica18.h
+t2=1
+[Practica18.c]
+Type=4
+
+[defines]
+buildcount=4
+[Units]
+Count=1
+1=Practica18 (main)

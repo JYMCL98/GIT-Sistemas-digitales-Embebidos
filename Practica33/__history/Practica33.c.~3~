@@ -1,0 +1,16 @@
+#include <Practica33.h>
+#include <lcd.c>
+#include <kbd.c>
+#include <stdlib.h>
+
+void main()
+{
+
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}

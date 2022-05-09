@@ -1,0 +1,19 @@
+#include <practica8.h>
+
+void main()
+{
+
+   while(TRUE)
+   {
+      output_high(PIN_B0);
+      output_high(PIN_B7);
+      delay_ms(DELAY);
+      
+      output_high(PIN_B1);
+      output_high(PIN_B6);
+      
+
+      //TODO: User Code
+   }
+
+}

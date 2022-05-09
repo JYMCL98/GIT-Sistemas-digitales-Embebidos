@@ -1,0 +1,14 @@
+#include <Practica3.h>
+#use rs232(baud=9600,xmit=PIN
+
+void main()
+{
+
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}

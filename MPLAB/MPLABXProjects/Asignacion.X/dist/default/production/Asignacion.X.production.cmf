@@ -1,0 +1,214 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/Principal.o
+my_codigo code 0 0 0 63 2
+config CONFIG 4 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM C-4D 1
+BANK0 C-4D 1
+CONST 63-3FF 2
+ENTRY 63-3FF 2
+IDLOC 2000-2003 2
+CODE 63-3FF 2
+SFR1 C6-CD 1
+EEDATA 2100-213F 2
+STRCODE 63-3FF 2
+STRING 63-3FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/Principal.o
+0 my_codigo code >24:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1 my_codigo code >25:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2 my_codigo code >26:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3 my_codigo code >27:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4 my_codigo code >28:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5 my_codigo code >29:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+6 my_codigo code >32:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+7 my_codigo code >33:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+8 my_codigo code >34:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+9 my_codigo code >35:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+A my_codigo code >36:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+B my_codigo code >37:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+C my_codigo code >38:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+D my_codigo code >39:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+E my_codigo code >43:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+F my_codigo code >44:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+10 my_codigo code >45:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+11 my_codigo code >46:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+12 my_codigo code >47:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+13 my_codigo code >48:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+14 my_codigo code >49:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+15 my_codigo code >50:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+16 my_codigo code >54:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+17 my_codigo code >55:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+18 my_codigo code >56:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+19 my_codigo code >57:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1A my_codigo code >58:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1B my_codigo code >59:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1C my_codigo code >60:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1D my_codigo code >61:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1E my_codigo code >65:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+1F my_codigo code >66:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+20 my_codigo code >67:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+21 my_codigo code >68:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+22 my_codigo code >69:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+23 my_codigo code >70:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+24 my_codigo code >71:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+25 my_codigo code >72:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+26 my_codigo code >75:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+27 my_codigo code >76:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+28 my_codigo code >77:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+29 my_codigo code >78:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2A my_codigo code >79:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2B my_codigo code >80:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2C my_codigo code >81:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2D my_codigo code >82:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2E my_codigo code >85:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+2F my_codigo code >86:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+30 my_codigo code >87:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+31 my_codigo code >88:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+32 my_codigo code >89:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+33 my_codigo code >90:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+34 my_codigo code >91:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+35 my_codigo code >92:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+36 my_codigo code >95:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+37 my_codigo code >96:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+38 my_codigo code >97:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+39 my_codigo code >98:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3A my_codigo code >99:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3B my_codigo code >100:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3C my_codigo code >101:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3D my_codigo code >102:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3E my_codigo code >105:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+3F my_codigo code >106:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+40 my_codigo code >107:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+41 my_codigo code >108:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+42 my_codigo code >109:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+43 my_codigo code >110:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+44 my_codigo code >111:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+45 my_codigo code >112:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+46 my_codigo code >115:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+47 my_codigo code >116:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+48 my_codigo code >117:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+49 my_codigo code >118:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4A my_codigo code >119:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4B my_codigo code >120:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4C my_codigo code >121:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4D my_codigo code >122:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4E my_codigo code >126:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+4F my_codigo code >127:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+50 my_codigo code >128:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+51 my_codigo code >129:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+52 my_codigo code >130:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+53 my_codigo code >131:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+54 my_codigo code >132:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+55 my_codigo code >133:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+56 my_codigo code >136:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+57 my_codigo code >137:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+58 my_codigo code >138:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+59 my_codigo code >139:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5A my_codigo code >140:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5B my_codigo code >141:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5C my_codigo code >144:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5D my_codigo code >145:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5E my_codigo code >146:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+5F my_codigo code >147:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+60 my_codigo code >148:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+61 my_codigo code >149:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+62 my_codigo code >150:C:\Users\jymcl\MPLABXProjects\Asignacion.X\Principal.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 C6 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__Hudata_bank0 C6 0 ABS 0 udata_bank0 -
+__Hedata C6 0 ABS 0 edata -
+__Hudata C6 0 ABS 0 udata -
+__Hconfig 4010 0 CONFIG 4 config -
+__Ledata C6 0 ABS 0 edata -
+__Ludata C6 0 ABS 0 udata -
+__Hcode C6 0 ABS 0 code -
+__Hdata C6 0 ABS 0 data -
+__Lcode C6 0 ABS 0 code -
+__Ldata C6 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 C6 0 ABS 0 udata_bank0 -
+__Hmy_codigo C6 0 code 0 my_codigo -
+__Lmy_codigo 0 0 code 0 my_codigo -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

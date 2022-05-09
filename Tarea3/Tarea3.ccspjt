@@ -1,0 +1,43 @@
+[PROJECT]
+Target=Tarea3.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Tarea3.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Tarea3\Tarea3]
+Type=4
+[mru-list]
+1=Tarea3.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=18-06-2021
+D1_L=4
+D1_L1=[37045]Project Opened.
+D1_L2=[37085]Started Editing.
+D1_L3=[37549]Stopped Editing.
+TotalEdit=3
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L4=[39854]Project Closed.
+
+[Opened Files]
+1=Tarea3.c
+t1=1
+Count=1
+[Tarea3.c]
+Type=4
+[Units]
+Count=1
+1=Tarea3 (main)
+
+[defines]
+buildcount=1

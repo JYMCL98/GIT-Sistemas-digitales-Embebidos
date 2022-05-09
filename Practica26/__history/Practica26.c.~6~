@@ -1,0 +1,51 @@
+#include <Practica26.h>
+#use standard_io(c)
+#use standard_io(a)
+#use standard_io(b)
+#include <lcd.c>
+
+void main()
+{
+   set_tris_a(0b11111);
+   set_tris_b(0x00); //puerto b como salida
+   set_tris_c(0x00); //Puerto c como salida
+   lcd_init();
+   while(TRUE)
+   {
+      //PIN_C0 - 1A
+      //PIN_C1 - 2A
+      //PIN_C2 - ENABLE
+      
+      //PIN_A0 - control de giro a la derecha
+      //PIN_A1 - control de giro a la izquierda
+      output_high(PIN_C2);//High
+      
+      
+      if(input_state(PIN_A0)==1){ // se puede omitir el 1 Turn right
+         //output_high(PIN_C0);//H
+         output_low(PIN_C0);//L
+         output_high(PIN_C1);//H
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"Derecha     ");
+      }
+      else if(input_state(PIN_A1)==1){ //turn left
+         //output_high(PIN_C0);//H
+         output_high(PIN_C0);//H
+         output_low(PIN_C1);//L
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"Izquierda      ");
+      }
+      
+      else{ //stop
+         //output_high(PIN_C0);//H
+         output_low(PIN_C0);//L
+         output_low(PIN_C1);//L
+         lcd_gotoxy(1,1);
+         printf(lcd_putc,"    No gira   ");
+      }
+      
+      
+      
+   }
+
+}

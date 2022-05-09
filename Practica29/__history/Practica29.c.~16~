@@ -1,0 +1,83 @@
+#include <Practica29.h>
+// Incluimos la libreria map para poder ocupar dicha función
+#include <map_function.c>
+// Habilitamos los pines para la LCD
+#define LCD_ENABLE_PIN  PIN_B3
+#define LCD_RS_PIN      PIN_B1
+#define LCD_RW_PIN      PIN_B2
+#define LCD_DATA4       PIN_B4
+#define LCD_DATA5       PIN_B5
+#define LCD_DATA6       PIN_B6
+#define LCD_DATA7       PIN_B7
+#include <lcd.c>
+
+// Declaramos una variable de tipo entero de 16 bits
+int16 valor_ADC;
+// Declaramos una variable de tipo flotante para referenciar al angulo
+float angulo=0;
+// Declaramos una variable de tipo flotante 
+// para referenciar al valor de entrada que proporciona el potenciómetro
+float entrada=0;
+// Declaramos una variable de tipo flotante 
+// como entrada máxima para este caso 2^10 = 1024
+float ent_max = 1023;
+// Declaramos una variable de tipo flotante 
+// como entrada mínima con valor igual a 0
+float ent_min = 0;
+// Declaramos una variable de tipo flotante 
+// para el ciclo de trabajo máximo
+float duty_max = 500;
+// Declaramos una variable de tipo flotante 
+// para el ciclo de trabajo minimo
+float duty_min = 250;
+// Declaramos una variable de tipo flotante
+// para establecer el valor máximo del servomotor
+float angulo_max = 180;
+// Declaramos una variable de tipo flotante
+// para establecer el valor minimo del servomotor
+float angulo_min = 0;
+
+
+void main()
+{
+   // Inicializamos la LCD
+   lcd_init();
+   // Configuramos el ADC
+   // Configuramos al canal A como salidas analógicas
+   setup_adc_ports(sAN0);
+   // Habilitamos el reloj interno del micro
+   setup_adc(ADC_CLOCK_INTERNAL);
+   // Habilitamos el canal 0
+   set_adc_channel(0);
+   
+   // Configuramos el Timer
+   // prescalador, contador, postcalador
+   setup_timer_2(T2_DIV_BY_16,255,1);
+   // Configuramos al ccp1 como PWM
+   setup_ccp1(ccp_pwm);
+   
+   while(TRUE)
+   {
+      // Leemos el valor del potenciómetro en A0
+      valor_ADC = read_adc();
+      
+      // Realizamos una interpolación para obtener el valor de la entrada
+      entrada = (duty_min) + ((duty_max - duty_min)
+               /(ent_max - ent_min))*(valor_ADC - ent_min);
+      // Realizamos una interpolación para obtener el valor del ángulo
+      angulo = (angulo_min) + ((angulo_max - angulo_min)
+               /(ent_max - ent_min))*(valor_ADC - ent_min);
+      
+      // Convertimos la variable servo a un entero de 16 bits
+      set_pwm1_duty((int16)entrada);
+      delay_ms(20);
+      
+      
+      lcd_gotoxy(1,1); // colocamos el texto en: (columna 1, fila 1) 
+      printf(lcd_putc," Posicion"); // imprimimos los grados
+      lcd_gotoxy(1,2); // colocamos el texto en: (columna 1, fila 2) 
+      printf(lcd_putc," %f Grados",angulo); // imprimimos los grados
+      
+   }
+
+}

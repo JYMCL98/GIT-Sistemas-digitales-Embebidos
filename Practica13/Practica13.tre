@@ -1,0 +1,16 @@
+읕Practica13
+   읕main  0/85  Ram=2
+      쳐@cinit1  (Inline)  Ram=0
+      쳐@cinit2  (Inline)  Ram=0
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@delay_ms1  0/20  Ram=1
+      쳐@WRITEBITA  0/29  Ram=5
+      쳐@WRITEBITA  0/29  Ram=5
+      읕@delay_ms1  0/20  Ram=1

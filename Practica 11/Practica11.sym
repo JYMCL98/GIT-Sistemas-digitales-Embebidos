@@ -1,0 +1,50 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+009-00A @READ_PROGRAM_MEMORY8.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+011     main.@SCRATCH1
+012     @delay_ms1.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000018  @cinit1
+000018  main
+00001B  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 11\
+
+Project Files:
+    Practica11.c                                            [03-jun.-21 15:15  CRC=0566A9F7]
+    Practica11.h                                            [22-jul.-21 11:09  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84.h [30-oct.-19 15:47  CRC=A8D3F822]
+
+Source signature=570E9A3B
+Program memory checksum=0000
+Hex file CRC=8F05
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 11\Practica11 (main)
+
+Compiler Settings:
+    Processor:      PIC16F84
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica11.xsym
+    Errors:      Practica11.err
+    Ext Symbols: Practica11.esym
+    INHX8:       Practica11.hex
+    Symbols:     Practica11.sym
+    List:        Practica11.lst
+    Debug/COFF:  Practica11.cof
+    Project:     Practica11.ccspjt
+    Call Tree:   Practica11.tre
+    Statistics:  Practica11.STA

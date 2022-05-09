@@ -1,0 +1,105 @@
+[PROJECT]
+Target=Practica29.hex
+Processor_Text=PIC16F876A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica29.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica29\Practica29]
+Type=4
+[mru-list]
+1=Practica29.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=6
+D1=28-06-2021
+D1_L=28
+D1_L1=[77306]Project Opened.
+D1_L2=[77309]Started Editing.
+D1_L3=[77612]Stopped Editing.
+D1_L4=[77772]Started Editing.
+D1_L5=[78073]Stopped Editing.
+TotalEdit=55
+TotalDebug=0
+D1_E=14
+D1_D=0
+D1_L6=[78313]Project Closed.
+D1_L7=[78360]Project Opened.
+D1_L8=[78364]Started Editing.
+D1_L9=[78406]Stopped Editing.
+D1_L10=[78407]Project Closed.
+D1_L11=[78420]Project Opened.
+D1_L12=[78423]Started Editing.
+D1_L13=[78726]Stopped Editing.
+D1_L14=[79034]Project Closed.
+D1_L15=[82464]Project Opened.
+D1_L16=[82469]Started Editing.
+D1_L17=[82773]Stopped Editing.
+D1_L18=[83269]Project Closed.
+D1_L19=[83281]Project Opened.
+D1_L20=[83285]Started Editing.
+D1_L21=[83586]Stopped Editing.
+D1_L22=[83714]Started Editing.
+D1_L23=[84074]Stopped Editing.
+D1_L24=[84516]Started Editing.
+D1_L25=[85034]Stopped Editing.
+D1_L26=[85502]Started Editing.
+D1_L27=[85816]Stopped Editing.
+D1_L28=[85816]Project Closed.
+D2=29-06-2021
+D2_L=12
+D2_L1=[44516]Project Opened.
+D2_L2=[44530]Started Editing.
+D2_L3=[45459]Stopped Editing.
+D2_E=41
+D2_D=0
+D2_L4=[60744]Project Closed.
+D2_L5=[77260]Project Opened.
+D2_L6=[77796]Started Editing.
+D2_L7=[78978]Stopped Editing.
+D2_L8=[78978]Project Closed.
+D2_L9=[78992]Project Opened.
+D2_L10=[78997]Started Editing.
+D2_L11=[79587]Stopped Editing.
+D2_L12=[79587]Project Closed.
+D3=01-07-2021
+D3_L=2
+D3_L1=[51404]Project Opened.
+D3_L2=[53883]Project Closed.
+D4=25-07-2021
+D4_L=2
+D4_L1=[70868]Project Opened.
+D4_L2=[73622]Project Closed.
+D5=27-07-2021
+D5_L=4
+D5_L1=[50604]Project Opened.
+D5_L2=[50629]Started Editing.
+D5_L3=[51845]Project Opened.
+D5_L4=[52628]Project Closed.
+D6=28-07-2021
+D6_L=2
+D6_L1=[59987]Project Opened.
+D6_L2=[59998]Project Closed.
+
+[Opened Files]
+1=Practica29.c
+t1=33
+Count=2
+2=Practica29.h
+t2=1
+3=..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F883.h
+t3=1
+[Practica29.c]
+Type=4
+
+[defines]
+buildcount=15
+[Units]
+Count=1
+1=Practica29 (main)

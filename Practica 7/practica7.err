@@ -1,0 +1,19 @@
+Compiling C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7 on 11-jul.-21 at 12:27
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 9(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 11(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 14(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 16(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 19(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 21(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 24(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 26(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 29(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 31(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 34(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 36(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 39(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 41(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 44(13,18): Undefined identifier   DELAY
+*** Error 12 "C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica 7\practica7.c" Line 46(13,18): Undefined identifier   DELAY
+      16 Errors,  0 Warnings.
+Build Failed.

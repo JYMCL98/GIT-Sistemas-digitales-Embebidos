@@ -1,0 +1,24 @@
+#include <practica23.h>
+#include <lcd.c>
+
+void main()
+{
+   lcd_init();
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   int16 lectura_ADC;
+   float valor_voltaje;
+   
+   while(TRUE)
+   {
+      set_adc_channel(0);
+      delay_us(20);
+      lectura_ADC=read_adc();
+      valor_voltaje= (5.0*lectura_ADC/1023);
+      
+      lcd_gotoxy(1,1);
+      printf(lcd_putc,"ADC = %Lu", lectura_ADC);
+      delay_ms(300);
+   }
+
+}

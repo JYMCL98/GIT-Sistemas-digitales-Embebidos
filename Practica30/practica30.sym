@@ -1,0 +1,50 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+009-00A @READ_PROGRAM_MEMORY8.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+011     main.@SCRATCH1
+012     @delay_ms1.P1
+
+ROM Allocation:
+000004  @delay_ms1
+000018  @cinit1
+000018  main
+00001B  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica30\
+
+Project Files:
+    practica30.c                                            [29-jun.-21 08:08  CRC=D983A56A]
+    practica30.h                                            [29-jun.-21 07:40  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84A.h [30-oct.-19 15:47  CRC=003106DB]
+
+Source signature=D9E5B320
+Program memory checksum=0000
+Hex file CRC=7718
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica30\practica30 (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   practica30.xsym
+    Errors:      practica30.err
+    Ext Symbols: practica30.esym
+    INHX8:       practica30.hex
+    Symbols:     practica30.sym
+    List:        practica30.lst
+    Debug/COFF:  practica30.cof
+    Project:     practica30.ccspjt
+    Call Tree:   practica30.tre
+    Statistics:  practica30.STA

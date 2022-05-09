@@ -1,0 +1,76 @@
+[PROJECT]
+Target=Practica21.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica21.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica21\Practica21]
+Type=4
+[mru-list]
+1=Practica21.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=4
+D1=14-06-2021
+D1_L=4
+D1_L1=[56902]Project Opened.
+D1_L2=[56909]Started Editing.
+D1_L3=[57689]Stopped Editing.
+TotalEdit=53
+TotalDebug=0
+D1_E=9
+D1_D=0
+D1_L4=[61534]Project Closed.
+D2=15-06-2021
+D2_L=4
+D2_L1=[27096]Project Opened.
+D2_L2=[27675]Started Editing.
+D2_L3=[29652]Stopped Editing.
+D2_E=28
+D2_D=0
+D2_L4=[41195]Project Closed.
+D3=17-06-2021
+D3_L=3
+D3_L1=[50323]Project Opened.
+D3_L2=[50555]Project Opened.
+D3_L3=[50665]Project Closed.
+D4=25-07-2021
+D4_L=12
+D4_L1=[4303]Project Opened.
+D4_L2=[4314]Started Editing.
+D4_L3=[4621]Stopped Editing.
+D4_L4=[5391]Started Editing.
+D4_L5=[5692]Stopped Editing.
+D4_L6=[5873]Started Editing.
+D4_L7=[6724]Stopped Editing.
+D4_L8=[6724]Started Editing.
+D4_L9=[7032]Stopped Editing.
+D4_L10=[7147]Started Editing.
+D4_L11=[7807]Stopped Editing.
+D4_E=16
+D4_D=0
+D4_L12=[9260]Project Closed.
+
+[Opened Files]
+1=Practica21.c
+t1=1
+Count=3
+2=..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t2=53
+3=Practica21.h
+t3=1
+[Practica21.c]
+Type=4
+
+[defines]
+buildcount=28
+[Units]
+Count=1
+1=Practica21 (main)

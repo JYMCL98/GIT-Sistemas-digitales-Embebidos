@@ -1,0 +1,67 @@
+[PROJECT]
+Target=Practica3.hex
+Processor_Text=PIC16F873A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica3.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica34\Practica3]
+Type=4
+[mru-list]
+1=Practica3.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=06-07-2021
+D1_L=4
+D1_L1=[32008]Project Opened.
+D1_L2=[32291]Started Editing.
+D1_L3=[32591]Stopped Editing.
+TotalEdit=18
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L4=[35471]Project Closed.
+D2=08-07-2021
+D2_L=2
+D2_L1=[52015]Project Opened.
+D2_L2=[62485]Project Closed.
+D3=09-07-2021
+D3_L=14
+D3_L1=[27173]Project Opened.
+D3_L2=[27229]Started Editing.
+D3_L3=[28071]Stopped Editing.
+D3_E=17
+D3_D=0
+D3_L4=[28071]Project Closed.
+D3_L5=[28735]Project Opened.
+D3_L6=[28742]Started Editing.
+D3_L7=[28760]Stopped Editing.
+D3_L8=[28760]Project Closed.
+D3_L9=[29422]Project Opened.
+D3_L10=[29426]Started Editing.
+D3_L11=[29740]Stopped Editing.
+D3_L12=[29775]Project Closed.
+D3_L13=[29853]Project Opened.
+D3_L14=[30944]Project Closed.
+
+[Opened Files]
+1=Practica3.c
+t1=1
+Count=2
+2=Practica3.h
+t2=1
+[Practica3.c]
+Type=4
+
+[defines]
+buildcount=5
+[Units]
+Count=1
+1=Practica3 (main)

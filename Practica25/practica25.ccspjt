@@ -1,0 +1,53 @@
+[PROJECT]
+Target=practica25.hex
+Processor_Text=PIC16F876A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=practica25.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica25\practica25]
+Type=4
+[mru-list]
+1=practica25.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=24-06-2021
+D1_L=10
+D1_L1=[53973]Project Opened.
+D1_L2=[54008]Started Editing.
+D1_L3=[55098]Stopped Editing.
+D1_L4=[55428]Started Editing.
+D1_L5=[55768]Stopped Editing.
+TotalEdit=14
+TotalDebug=0
+D1_E=14
+D1_D=0
+D1_L6=[55984]Project Closed.
+D1_L7=[56020]Project Opened.
+D1_L8=[56105]Project Closed.
+D1_L9=[56120]Project Opened.
+D1_L10=[56133]Project Closed.
+
+[Opened Files]
+1=practica25.c
+t1=28
+Count=1
+2=..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F628A.h
+t2=1
+3=practica25.h
+t3=1
+[practica25.c]
+Type=4
+
+[defines]
+buildcount=5
+[Units]
+Count=1
+1=practica25 (main)

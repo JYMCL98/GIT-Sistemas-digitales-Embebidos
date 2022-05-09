@@ -1,0 +1,106 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcdlat
+006     lcd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     contador
+025     @PSTRINGCN7_676.P1
+025     @PRINTF_D_676.P2
+025     lcd_init.i
+025     MAIN.@SCRATCH1
+026     @PRINTF_D_676.P1
+026-029 lcd_init.LCD_INIT_STRING
+026     @PSTRINGCN7_676.@SCRATCH1
+027     @PSTRINGCN7_676.@SCRATCH2
+027     @PRINTF_D_676.@SCRATCH1
+028     @PSTRINGCN7_676.@SCRATCH3
+028     @PRINTF_D_676.@SCRATCH2
+029     @PSTRINGCN7_676.@SCRATCH4
+029     @PRINTF_D_676.@SCRATCH3
+02A     lcd_init.@SCRATCH1
+02A     @PRINTF_D_676.@SCRATCH4
+02B     lcd_putc.c
+02B     @DIV88.P1
+02C     @delay_ms1.P1
+02C     lcd_gotoxy.x
+02C     @DIV88.P1
+02D     lcd_gotoxy.y
+02D     @DIV88.@SCRATCH1
+02E     lcd_gotoxy.address
+02F     lcd_gotoxy.@SCRATCH1
+030     lcd_send_byte.address
+031     lcd_send_byte.n
+032     lcd_read_byte.low
+032     lcd_send_byte.@SCRATCH1
+033     lcd_read_byte.high
+033     lcd_send_nibble.n
+034     lcd_read_byte.@SCRATCH1
+086     lcdtris
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const692.call
+00000E  @delay_ms1
+000022  lcd_send_nibble
+00002E  lcd_read_nibble
+000034  lcd_send_byte
+00003A  lcd_read_byte
+000074  lcd_init
+0000B0  lcd_gotoxy
+0000C2  lcd_putc
+0000EE  @PSTRINGCN7_676
+000146  @DIV88
+00015B  @PRINTF_D_676
+0001B3  @cinit1
+0001B3  MAIN
+0001C5  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica34\
+
+Project Files:
+    Practica3.c                                             [09-jul.-21 08:10  CRC=E4670BCE]
+    Practica3.h                                             [09-jul.-21 07:36  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F873A.h [30-oct.-19 15:48  CRC=E9A13BDC]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-feb.-16 10:05  CRC=D1A6378A]
+
+Source signature=7154B6BE
+Program memory checksum=0000
+Hex file CRC=9501
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica34\Practica3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F873A
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica3.xsym
+    Errors:      Practica3.err
+    Ext Symbols: Practica3.esym
+    INHX8:       Practica3.hex
+    Symbols:     Practica3.sym
+    List:        Practica3.lst
+    Debug/COFF:  Practica3.cof
+    Project:     Practica3.ccspjt
+    Call Tree:   Practica3.tre
+    Statistics:  Practica3.STA

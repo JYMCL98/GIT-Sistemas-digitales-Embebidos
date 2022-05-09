@@ -1,0 +1,51 @@
+#include <Tarea3.h>
+
+#use standard_io(b)
+#use standard_io(c)
+#define Vel 800
+int contador = 0;
+unsigned int Vel = 1000;
+//int16 Vel;
+//int Vel;
+
+void delay_new(unsigned int millis){
+   while(millis > 0){
+      delay_ms(1);
+      millis--;
+   }
+}
+
+byte const CW[8] = {0b1000, 0b1100, 0b0100, 0b0110, 0b0010, 0b0011, 0b0001, 0b1001};                      
+byte const CCW[8] ={0b1001, 0b0001, 0b0011, 0b0010, 0b0110, 0b0100, 0b1100, 0b1000};
+     
+void motor(int contador){
+      if(input_state(PIN_C0)){
+         //CW
+         output_b(CW[contador]);
+      }
+      else{
+         //CCW
+         output_b(CCW[contador]);
+      }
+      delay_new(millis(Vel));
+}
+
+void main(){
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   
+   set_tris_b(0x00);
+   set_tris_c(0x01);
+   while(TRUE)
+   {
+      for(contador = 0; contador <= 7; contador++){
+         set_adc_channel(0);
+         delay_us(20);
+         //Vel = read_ADC();   
+         //Vel = Vel * 1000/1023;
+         motor(contador);
+      }
+   }
+
+}
+

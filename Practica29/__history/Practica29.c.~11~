@@ -1,0 +1,77 @@
+#include <Practica29.h>
+#define LCD_ENABLE_PIN  PIN_B3
+#define LCD_RS_PIN      PIN_B1
+#define LCD_RW_PIN      PIN_B2
+#define LCD_DATA4       PIN_B4
+#define LCD_DATA5       PIN_B5
+#define LCD_DATA6       PIN_B6
+#define LCD_DATA7       PIN_B7
+
+#include <lcd.c>
+
+int16 valor;
+float angulo=0;
+float entrada=0;
+float entMax1=1023,entMin1=0,salMax1=495,salMin1=255;
+float entMax=1023,entMin=0,salMax=90,salMin=-90;
+
+
+
+void main()
+{
+
+lcd_init();
+
+   
+   
+    //CONFIGURACION DE PUERTOS
+   setup_adc_ports(sAN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   set_adc_channel(0);
+   
+   //TIMER
+   setup_timer_2(T2_DIV_BY_16,255,1);
+   setup_ccp1(ccp_pwm);
+   
+   
+   while(TRUE)
+   {
+   
+   valor=read_adc();
+   entrada=(valor-entMin1)*((salMax1-salMin1)/(entMax1-entMin1))+salMin1;
+   angulo=(valor-entMin)*((salMax-salMin)/(entMax-entMin))+salMin;
+   set_pwm1_duty((int16)entrada);
+   delay_ms(20);
+      lcd_gotoxy(1,1);
+      printf(lcd_putc,"Grados: %f",angulo);
+
+   }
+
+}
+
+
+/*
+void main()
+{
+   lcd_init();
+   // Configuramos el ADC
+   setup_adc_ports(sAN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   set_adc_channel(0);
+   
+   // Configuramos el Timer
+   setup_timer_2(T2_DIV_BY_16,255,1);
+   setup_ccp1(ccp_pwm);
+   
+   while(TRUE)
+   {
+      set_pwm1_duty(read_adc());
+      delay_ms(20);
+      lcd_gotoxy(1,1);
+      printf(lcd_putc,"Angulo");
+      
+   }
+
+}
+*/
+

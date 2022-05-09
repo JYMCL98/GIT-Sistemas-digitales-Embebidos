@@ -1,0 +1,8 @@
+ÀÄPractica17a
+   ÀÄMAIN  0/56  Ram=8
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄsrand  0/9  Ram=4
+      ÀÄrand  0/136  Ram=4
+         ÃÄ@MUL3232  (Inline)  Ram=13
+         ÀÄ@DIV1616  (Inline)  Ram=5

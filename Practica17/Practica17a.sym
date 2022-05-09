@@ -1,0 +1,77 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+009-00A @READ_PROGRAM_MEMORY8.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+010     strtok.save
+011-014 _Randseed
+015-01A MAIN.numeros
+01B     MAIN.contar
+01C-01F srand.seed
+01C-01F @MUL3232.P1
+01C     rand.@SCRATCH1
+01C     MAIN.@SCRATCH1
+01D     rand.@SCRATCH2
+01E     rand.@SCRATCH3
+01F-020 @DIV1616.P1
+01F     rand.@SCRATCH4
+020-023 @MUL3232.P1
+021-022 @DIV1616.P1
+023     @DIV1616.@SCRATCH1
+024     @MUL3232.@SCRATCH1
+025     @MUL3232.@SCRATCH2
+026     @MUL3232.@SCRATCH3
+027     @MUL3232.@SCRATCH4
+028     @MUL3232.@SCRATCH5
+
+ROM Allocation:
+000004  srand
+00000D  rand
+00001D  @MUL3232
+00006C  @DIV1616
+000095  @cinit1
+000095  MAIN
+000098  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica17\
+
+Project Files:
+    Practica17a.c                                           [23-jul.-21 21:00  CRC=F59A2E44]
+    Practica17a.h                                           [23-jul.-21 21:02  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F83.h [30-oct.-19 15:47  CRC=3F4693C5]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [29-mar.-19 13:31  CRC=99D16202]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [30-ene.-19 12:26  CRC=897CEC6C]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [02-ago.-19 11:17  CRC=428BEDCB]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-ene.-08 15:55  CRC=2D1F019F]
+
+Source signature=F4F90180
+Program memory checksum=0000
+Hex file CRC=72B2
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica17\Practica17a (main)
+
+Compiler Settings:
+    Processor:      PIC16F83
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica17a.xsym
+    Errors:      Practica17a.err
+    Ext Symbols: Practica17a.esym
+    INHX8:       Practica17a.hex
+    Symbols:     Practica17a.sym
+    List:        Practica17a.lst
+    Debug/COFF:  Practica17a.cof
+    Project:     Practica17a.ccspjt
+    Call Tree:   Practica17a.tre
+    Statistics:  Practica17a.STA

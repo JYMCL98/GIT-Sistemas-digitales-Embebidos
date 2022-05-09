@@ -1,0 +1,128 @@
+#include <Tarea2.h>
+#define LCD_RS_PIN      PIN_B1
+#define LCD_RW_PIN      PIN_B2
+#define LCD_ENABLE_PIN  PIN_B3
+#define LCD_DATA4       PIN_B4
+#define LCD_DATA5       PIN_B5
+#define LCD_DATA6       PIN_B6
+#define LCD_DATA7       PIN_B7
+#include <lcd.c>
+#use standard_io(b)
+
+// Declaración de variable
+int contador = 217;  // variable contadora a decrementar
+int s_1 = 5;  // segundo
+int s_2 = 5;  // segundo
+int m_1 = 5;  // minuto
+int m_2 = 9;  // minuto
+int h_1 = 1;  // hora
+int h_2 = 0;  // hora
+
+
+//Caracteres animados
+int bomba1[8]={4,4,27,4,4,0,0,0};
+int bomba2[8]={0,25,6,0,0,0,0,0};
+int bomba3[8]={0,19,12,0,0,0,0,0};
+int bomba4[8]={0,6,25,0,0,0,0,0};
+int bomba5[8]={0,12,19,0,0,0,0,0};
+int bomba6[8]={0,24,4,14,31,31,14,0};
+int exp[8]={21,10,21,10,21,10,21,0};
+
+
+void bomba(){
+   // columna, fila
+   lcd_gotoxy(1,1);
+   // Mostramos la hora en el LCD
+   printf(lcd_putc,"Hora: %d%d:%d%d:%d%d", h_1,h_2,m_1,m_2,s_1,s_2);
+   
+   lcd_gotoxy(1,2);
+   // Mostramos el estado inicial de la animación
+   printf(lcd_putc,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c", 0, 1, 2, 3, 4,  1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 5);
+   // Creamos un bucle que hace posible la animación
+   for(int i=0; i<=16;i++){
+   
+      lcd_gotoxy(1,1);
+      // Mostramos la hora
+      printf(lcd_putc,"Hora: %d%d:%d%d:%d%d", h_1,h_2,m_1,m_2,s_1,s_2);
+      lcd_gotoxy(i,2);
+      printf(lcd_putc," %c",0);
+      delay_ms(200);
+  
+      if (i==16){
+         lcd_gotoxy(0,2);
+         printf(lcd_putc,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c",6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6);
+         delay_ms(200);
+      }
+   }
+    
+}
+
+#INT_TIMER0
+// Interrupción interna
+void reloj(){  
+   contador--;  // decrementa el contador
+   set_timer0(238);  //este es el valor de seteo del timer
+   
+   // Si el contador llega a cero, paso un segundo
+   if(contador==0){
+      s_2++;  // Cuando el contador llega a 0 transcurre un segundo
+      contador=217;  // Inicializa el contador para el próximo periodo
+      
+      if(s_2 == 10) {  // si el segundo de la derecha llega a 10
+         s_2 = 0;  // se reinicia el valor del segundo de la derecha
+         s_1++;  // aumenta el segundo de la izquierda
+         
+         if(s_1 == 6){  // si el segundo de la izquierda es 6 se ha cumplido un minuto
+            s_1 = 0;  // se reinicia el valor del segundo de la izquierda
+            m_2++;  // aumneta en 1 el minuto
+            
+            if(m_2 == 10)  {  // si el minuto de la derecha llega a 10
+               m_2 = 0;  // se reinicia el valor del minuto de la derecha
+               m_1++;  // el valor del minuto de la izquierda aumenta
+               
+               if(m_1 == 6) {  // si el valor del minuto de la izquierda llega a 6 ha pasado una hora               
+                  m_1 = 0;  // el minuto de la izquierda se reinicia
+                  h_2++;  // aumenta una hora
+                  
+                  if(h_2 == 3) {  // si la hora de la derecha llega a 10
+                     h_1++;  // aumenta en 1 la hora de la izquierda
+                     h_2 = 1;  // se reinicia el valor de la derecha
+                     
+                     if(h_1==2) {  // si el valor de hora izquierda llega a 12
+                        h_1=0;  // se reinicia el reloj 
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+void main()
+{
+   lcd_init();  // Esta función es utilizada para inicializar la lcd en su modo de 8 bits
+   // Declaramos los caracteres especiales en la memoria
+   lcd_set_cgram_char(0,bomba1);
+   lcd_set_cgram_char(1,bomba2);
+   lcd_set_cgram_char(2,bomba3);
+   lcd_set_cgram_char(3,bomba4);
+   lcd_set_cgram_char(4,bomba5);
+   lcd_set_cgram_char(5,bomba6);
+   lcd_set_cgram_char(6,exp);
+   
+   // Establecemos al puerto B como salidas
+   set_tris_b(0x00);
+   // reloj interno del micro y el preescalador de 256
+   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_256);
+   // habilitación de las interrupciones de manera interna
+   enable_interrupts(INT_TIMER0);
+   // habilitar todas las interrupciones
+   enable_interrupts(GLOBAL);
+
+   while(TRUE)
+   {
+      bomba();
+   }
+}

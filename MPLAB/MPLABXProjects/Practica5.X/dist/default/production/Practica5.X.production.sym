@@ -1,0 +1,43 @@
+__S0 0 0 ABS 0
+__S1 0 0 ABS 0
+__S3 0 0 ABS 0
+__Hconfig 2008 0 CONFIG 4
+__Lconfig 0 0 CONFIG 4
+__Hmy_codigo E 0 code 0
+__Lmy_codigo 0 0 code 0
+__Hcode 1C 0 ABS 0
+__Lcode 1C 0 ABS 0
+__Hdata 1C 0 ABS 0
+__Ldata 1C 0 ABS 0
+__Hudata_bank0 1C 0 ABS 0
+__Ludata_bank0 1C 0 ABS 0
+__Hedata 1C 0 ABS 0
+__Ledata 1C 0 ABS 0
+__Hudata 1C 0 ABS 0
+__Ludata 1C 0 ABS 0
+__Hspace_0 1C 0 ABS 0
+__Lspace_0 0 0 ABS 0
+__Hspace_1 0 0 ABS 0
+__Lspace_1 0 0 ABS 0
+__Hspace_3 0 0 ABS 0
+__Lspace_3 0 0 ABS 0
+__Hspace_4 400F 0 ABS 0
+__Lspace_4 0 0 ABS 0
+%segments
+%locals
+build/default/production/Principal.o
+Principal.s
+12 0 0 code 0
+13 1 0 code 0
+14 2 0 code 0
+15 3 0 code 0
+16 4 0 code 0
+17 5 0 code 0
+20 6 0 code 0
+21 7 0 code 0
+22 8 0 code 0
+23 9 0 code 0
+24 A 0 code 0
+27 B 0 code 0
+28 C 0 code 0
+29 D 0 code 0

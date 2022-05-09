@@ -1,0 +1,51 @@
+[PROJECT]
+Target=Practica33.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica33.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica33\Practica33]
+Type=4
+[mru-list]
+1=Practica33.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=06-07-2021
+D1_L=8
+D1_L1=[27707]Project Opened.
+D1_L2=[27711]Started Editing.
+D1_L3=[29063]Stopped Editing.
+D1_L4=[30043]Started Editing.
+D1_L5=[30509]Stopped Editing.
+D1_L6=[30944]Started Editing.
+D1_L7=[31246]Stopped Editing.
+TotalEdit=21
+TotalDebug=0
+D1_E=21
+D1_D=0
+D1_L8=[32008]Project Closed.
+
+[Opened Files]
+1=Practica33.c
+t1=17
+Count=3
+2=..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t2=29
+3=..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\kbd.c
+t3=9
+[Practica33.c]
+Type=4
+
+[defines]
+buildcount=12
+[Units]
+Count=1
+1=Practica33 (main)

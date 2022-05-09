@@ -1,0 +1,59 @@
+[PROJECT]
+Target=Practica26.hex
+Processor_Text=PIC16F876A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica26.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica26\Practica26]
+Type=4
+[mru-list]
+1=Practica26.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=24-06-2021
+D1_L=14
+D1_L1=[56105]Project Opened.
+D1_L2=[56120]Project Closed.
+D1_L3=[56133]Project Opened.
+D1_L4=[56137]Started Editing.
+D1_L5=[56164]Stopped Editing.
+TotalEdit=12
+TotalDebug=0
+D1_E=12
+D1_D=0
+D1_L6=[56164]Project Closed.
+D1_L7=[56205]Project Opened.
+D1_L8=[56209]Started Editing.
+D1_L9=[56333]Stopped Editing.
+D1_L10=[56333]Project Closed.
+D1_L11=[56491]Project Opened.
+D1_L12=[57037]Started Editing.
+D1_L13=[57800]Stopped Editing.
+D1_L14=[57908]Project Closed.
+D2=25-06-2021
+D2_L=2
+D2_L1=[27326]Project Opened.
+D2_L2=[29033]Project Closed.
+
+[Opened Files]
+1=Practica26.c
+t1=1
+Count=2
+2=Practica26.h
+t2=1
+[Practica26.c]
+Type=4
+
+[defines]
+buildcount=9
+[Units]
+Count=1
+1=Practica26 (main)

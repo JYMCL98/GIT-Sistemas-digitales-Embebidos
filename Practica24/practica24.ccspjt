@@ -1,0 +1,57 @@
+[PROJECT]
+Target=practica24.hex
+Processor_Text=PIC16F876A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=practica24.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica24\practica24]
+Type=4
+[mru-list]
+1=practica24.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=22-06-2021
+D1_L=10
+D1_L1=[27602]Project Opened.
+D1_L2=[28545]Started Editing.
+D1_L3=[29108]Stopped Editing.
+D1_L4=[30142]Started Editing.
+D1_L5=[30446]Stopped Editing.
+D1_L6=[30852]Started Editing.
+D1_L7=[31315]Stopped Editing.
+D1_L8=[31675]Started Editing.
+D1_L9=[32350]Stopped Editing.
+TotalEdit=14
+TotalDebug=0
+D1_E=14
+D1_D=0
+D1_L10=[35894]Project Closed.
+D2=24-06-2021
+D2_L=6
+D2_L1=[55984]Project Opened.
+D2_L2=[56020]Project Closed.
+D2_L3=[56164]Project Opened.
+D2_L4=[56205]Project Closed.
+D2_L5=[56334]Project Opened.
+D2_L6=[56491]Project Closed.
+
+[Opened Files]
+1=practica24.c
+t1=1
+Count=1
+[practica24.c]
+Type=4
+
+[defines]
+buildcount=8
+[Units]
+Count=1
+1=practica24 (main)

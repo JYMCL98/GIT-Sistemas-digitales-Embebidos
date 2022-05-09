@@ -1,0 +1,51 @@
+[PROJECT]
+Target=Practica32.hex
+Processor_Text=PIC16F84A
+CCSVerions=5.091
+Compiler=PCM
+CCSVersion=5.091
+[Target Data]
+FileList=Practica32.c
+[Directories]
+Include=
+[C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica32\Practica32]
+Type=4
+[mru-list]
+1=Practica32.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=05-07-2021
+D1_L=8
+D1_L1=[54199]Project Opened.
+D1_L2=[54585]Started Editing.
+D1_L3=[55109]Stopped Editing.
+D1_L4=[55604]Started Editing.
+D1_L5=[55908]Stopped Editing.
+D1_L6=[55932]Started Editing.
+D1_L7=[56245]Stopped Editing.
+TotalEdit=4
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L8=[59435]Project Closed.
+D2=06-07-2021
+D2_L=2
+D2_L1=[27158]Project Opened.
+D2_L2=[27706]Project Closed.
+
+[Opened Files]
+1=Practica32.c
+t1=1
+Count=1
+[Practica32.c]
+Type=4
+
+[defines]
+buildcount=4
+[Units]
+Count=1
+1=Practica32 (main)

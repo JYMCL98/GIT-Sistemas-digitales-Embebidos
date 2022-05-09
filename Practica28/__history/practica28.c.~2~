@@ -1,0 +1,21 @@
+#include <practica28.h>
+
+void main()
+{
+   // Configuramos el ADC
+   setup_adc_pports(sAN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   set_adc_channel(0);
+   
+   // Configuramos el Timer
+   setup_timer_2(T2_DIV_BY_16,255,1);
+   setup_ccp1(ccp_pwm);
+   
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}

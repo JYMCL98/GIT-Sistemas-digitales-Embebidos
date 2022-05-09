@@ -1,0 +1,59 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+000010  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica25\
+
+Project Files:
+    practica25.c                                            [24-jun.-21 15:30  CRC=2C6B258A]
+    practica25.h                                            [24-jun.-21 15:00  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F876A.h [30-oct.-19 15:48  CRC=1078E3D6]
+
+Source signature=4D5CED36
+Program memory checksum=0000
+Hex file CRC=C8CC
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica25\practica25 (main)
+
+Compiler Settings:
+    Processor:      PIC16F876A
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   practica25.xsym
+    Errors:      practica25.err
+    Ext Symbols: practica25.esym
+    INHX8:       practica25.hex
+    Symbols:     practica25.sym
+    List:        practica25.lst
+    Debug/COFF:  practica25.cof
+    Project:     practica25.ccspjt
+    Call Tree:   practica25.tre
+    Statistics:  practica25.STA

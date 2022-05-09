@@ -1,0 +1,55 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+009-00A @READ_PROGRAM_MEMORY8.P1
+00C     @SCRATCH
+00D     @SCRATCH
+00D     _RETURN_
+00E     @SCRATCH
+00F     @SCRATCH
+011     main.i
+012     main.j
+013     @delay_ms1.P1
+013     @WRITEBITA.P2
+014     @WRITEBITA.P1
+015     @WRITEBITA.P1
+
+ROM Allocation:
+000004  @WRITEBITA
+000021  @delay_ms1
+000035  main
+000035  @cinit1
+000038  @cinit2
+
+Project Directory:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica13\
+
+Project Files:
+    Practica13.c                                            [22-jul.-21 20:15  CRC=B199066E]
+    practica13.h                                            [07-jun.-21 15:47  CRC=00000000]
+    ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F84A.h [30-oct.-19 15:47  CRC=003106DB]
+
+Source signature=B1FB1424
+Program memory checksum=0000
+Hex file CRC=D24C
+
+Units:
+    C:\Users\jymcl\Documents\Chapingo\6 Semestre\Sistemas digitales embebidos\Practica13\Practica13 (main)
+
+Compiler Settings:
+    Processor:      PIC16F84A
+    Pointer Size:   8
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Practica13.xsym
+    Errors:      Practica13.err
+    Ext Symbols: Practica13.esym
+    INHX8:       Practica13.hex
+    Symbols:     Practica13.sym
+    List:        Practica13.lst
+    Debug/COFF:  Practica13.cof
+    Project:     Practica13.ccspjt
+    Call Tree:   Practica13.tre
+    Statistics:  Practica13.STA
